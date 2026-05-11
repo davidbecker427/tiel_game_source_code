@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cadbnluqs7hqp"]
+
+[ext_resource type="Script" uid="uid://djjm0n5qjmg85" path="res://collectable's/coin.gd" id="1_18y38"]
+[ext_resource type="Texture2D" uid="uid://b3rnn1amrn84v" path="res://texturs/collectable.png" id="1_d5gmh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0t63x"]
+
+[node name="coin" type="Area2D" unique_id=748108016 groups=["coin"]]
+script = ExtResource("1_18y38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=773330852]
+shape = SubResource("CircleShape2D_0t63x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1958860570]
+texture = ExtResource("1_d5gmh")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs4daahkulg2g"]
+
+[ext_resource type="Script" uid="uid://dj8veh57rnt8c" path="res://code/registraatie.gd" id="1_0vqm4"]
+
+[node name="Registraatie" type="Node2D"]
+script = ExtResource("1_0vqm4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="terug_naar_login" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "terug naar login"
+
+[connection signal="pressed" from="Control/terug_naar_login" to="." method="_on_terug_naar_login_pressed"]

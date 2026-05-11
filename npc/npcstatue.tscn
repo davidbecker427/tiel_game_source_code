@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cex6wrxq61wp7"]
+
+[ext_resource type="Script" uid="uid://cw2ff61s0fmko" path="res://npc/npcstatue.gd" id="1_uvpsc"]
+[ext_resource type="Texture2D" uid="uid://b7uqciijywq6h" path="res://texturs/monument.png" id="2_rqbn0"]
+[ext_resource type="PackedScene" uid="uid://47cn8te3kykc" path="res://dialogue/dialogue2.tscn" id="3_hh7ni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukdxx"]
+size = Vector2(62, 67)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh24r"]
+radius = 74.24958
+
+[node name="npc" type="CharacterBody2D" unique_id=165503267]
+collision_mask = 5
+script = ExtResource("1_uvpsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=398661215]
+texture = ExtResource("2_rqbn0")
+
+[node name="dialogue" parent="." unique_id=1628206401 instance=ExtResource("3_hh7ni")]
+offset_left = -156.0
+offset_top = -136.0
+offset_right = 20.0
+offset_bottom = -8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929638076]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ukdxx")
+
+[node name="chat_detection_area" type="Area2D" parent="." unique_id=1060589871]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area" unique_id=354010364]
+position = Vector2(-4, -1)
+shape = SubResource("CircleShape2D_kh24r")
+
+[node name="Timer" type="Timer" parent="." unique_id=1359754210]
+autostart = true
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cajrsq7q4a007"]
+
+[ext_resource type="Script" uid="uid://ce1xnsivxov1l" path="res://scrapt/not_finished/create_user.gd" id="1_bx53f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wra3g"]
+
+[node name="create user window" type="Panel" unique_id=1790937293]
+offset_left = -2.0
+offset_top = 78.0
+offset_right = 303.0
+offset_bottom = 319.0
+script = ExtResource("1_bx53f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1973369472]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 51.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=553567438]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "create user"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1693245277]
+layout_mode = 2
+
+[node name="UserNameLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2" unique_id=1433975110]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "UserName"
+
+[node name="UserNameText" type="TextEdit" parent="VBoxContainer/HBoxContainer2" unique_id=816488517]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1574271663]
+layout_mode = 2
+
+[node name="PasswordLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer" unique_id=1853306353]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "password"
+
+[node name="PasswordText" type="TextEdit" parent="VBoxContainer/HBoxContainer" unique_id=1011197449]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="submit" type="Button" parent="VBoxContainer" unique_id=1036681294]
+layout_mode = 2
+text = "submit"
+
+[node name="close" type="Button" parent="." unique_id=1420039315]
+layout_mode = 0
+offset_left = 277.0
+offset_top = -1.0
+offset_right = 306.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wra3g")
+text = "x"
+
+[connection signal="button_down" from="VBoxContainer/submit" to="." method="_on_submit_button_down"]
+[connection signal="button_down" from="close" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="close" to="." method="_on_close_button_down"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://0rv4mgdqm8q6"]
+
+[ext_resource type="Script" uid="uid://d0txq34sgk360" path="res://code/options.gd" id="1_mbdsk"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_mbdsk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 485.0
+offset_top = 313.0
+offset_right = 525.0
+offset_bottom = 353.0
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_right = 194.0
+offset_bottom = 61.0
+text = "test options"
+
+[node name="back_to_main_menu" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -483.0
+offset_top = -311.0
+offset_right = -326.0
+offset_bottom = -280.0
+text = "back to main menu"
+
+[connection signal="pressed" from="Control/back_to_main_menu" to="." method="_on_back_to_main_menu_pressed"]

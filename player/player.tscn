@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b7sknxap448yw"]
+
+[ext_resource type="Script" uid="uid://ciix2drr0g0l7" path="res://player/player.gd" id="1_fui21"]
+[ext_resource type="PackedScene" uid="uid://drisdlhhf1o2e" path="res://gamemanger/gamemanger.tscn" id="2_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://bnljlrstfr1l8" path="res://texturs/player.png" id="2_ylu1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(16, 33)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fui21"]
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
+height = 36.0
+
+[node name="player" type="CharacterBody2D" unique_id=52804076 groups=["player"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_fui21")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814459758]
+texture = ExtResource("2_ylu1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809176625]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_rkbax")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1882933014]
+light_mask = 3
+visibility_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=604545126]
+shape = SubResource("CapsuleShape2D_fui21")
+
+[node name="area_detection" type="Area2D" parent="." unique_id=439646931]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_detection" unique_id=9441356]
+shape = SubResource("CapsuleShape2D_rkbax")
+
+[node name="Node2D" parent="." unique_id=734122412 instance=ExtResource("2_g1dw6")]
+position = Vector2(-516, -282)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=86147785]
+position = Vector2(57, 37)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=527500419]
+unique_name_in_owner = true
+offset_left = -541.0
+offset_top = -302.0
+offset_right = -446.0
+offset_bottom = -279.0
+text = "coin count 0"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="area_detection" to="." method="_on_area_detection_body_entered"]
+[connection signal="body_exited" from="area_detection" to="." method="_on_area_detection_body_exited"]
+[connection signal="body_shape_entered" from="area_detection" to="." method="_on_area_detection_body_shape_entered"]

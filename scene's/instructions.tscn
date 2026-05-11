@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://c2jle8wu3v4ip"]
+
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_7ls63"]
+[ext_resource type="Script" uid="uid://b3fbgcoplwx0n" path="res://scene's/instructions.gd" id="1_bsd6p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ls63"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_h8hbf"]
+font_size = 40
+
+[node name="Node2D" type="Node2D" unique_id=1795386680]
+script = ExtResource("1_bsd6p")
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=1449959449]
+position = Vector2(576, 324)
+scale = Vector2(1.294382, 1.0782031)
+texture = ExtResource("1_7ls63")
+
+[node name="Label" type="Label" parent="." unique_id=1872945844]
+offset_left = 304.0
+offset_top = 72.0
+offset_right = 813.0
+offset_bottom = 135.0
+text = "instructions"
+label_settings = SubResource("LabelSettings_7ls63")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=939335940]
+offset_left = 70.0
+offset_top = 144.0
+offset_right = 1095.0
+offset_bottom = 265.0
+text = "in deze game moet je zo veel mogelijke punten verzamelen dit doe je door monument te viden die je info geven over quiz vragen
+die je krijgt aan het einde van het level. deze quizes geven je punten. als je een monument niet kan vinden praat dan met de mensen
+die rond lopen door de map die geven je hint waar je de monumenten kan vinden. je kan ook munten door de map vinden die je ook 
+punten geven . maar kijk uit deze punten kunnen gestolen worden door de boeven rond de map lopen dus die moet je vermijden.
+als je all standbeelden hebt gevonden moet je weer terug naar de start toe gaan en door de deur een gaan.
+dan kom je uit bij de quiz vragen / je eindicht dan het level"
+
+[node name="Label3" type="Label" parent="." unique_id=1010188859]
+offset_left = 193.0
+offset_top = 308.0
+offset_right = 914.0
+offset_bottom = 367.0
+text = "controls"
+label_settings = SubResource("LabelSettings_h8hbf")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=713269709]
+offset_left = 136.0
+offset_top = 374.0
+offset_right = 1045.0
+offset_bottom = 482.0
+text = "WASD + peltjes toetsen = lopen
+C = praten met npc / monument bekijken
+spatiebalk = volgende text in gesprek
+E = om deuren te openen"
+
+[node name="Button" type="Button" parent="." unique_id=1962523580]
+offset_left = 367.0
+offset_top = 523.0
+offset_right = 701.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 27
+text = "start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

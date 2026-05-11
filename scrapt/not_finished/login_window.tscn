@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://shl4sxxfac4h"]
+
+[ext_resource type="Script" uid="uid://d32b8srs6c5kb" path="res://scrapt/not_finished/login_window.gd" id="1_kdjmr"]
+
+[node name="login window" type="Panel" unique_id=1692854269]
+offset_top = 376.0
+offset_right = 331.0
+offset_bottom = 648.0
+script = ExtResource("1_kdjmr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=359241490]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 38.0
+offset_right = 124.0
+offset_bottom = 73.0
+text = "username"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1473949166]
+layout_mode = 0
+offset_top = 133.0
+offset_right = 121.0
+offset_bottom = 168.0
+text = "password"
+
+[node name="Username" type="TextEdit" parent="." unique_id=1136044330]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 36.0
+offset_right = 320.0
+offset_bottom = 68.0
+
+[node name="Password" type="TextEdit" parent="." unique_id=765093742]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 129.0
+offset_right = 312.0
+offset_bottom = 161.0
+
+[node name="login" type="Button" parent="." unique_id=845196206]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 232.0
+offset_right = 332.0
+offset_bottom = 273.0
+text = "logn"
+
+[node name="cancel" type="Button" parent="." unique_id=1980135624]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 240.0
+offset_right = 90.0
+offset_bottom = 271.0
+text = "cancel"
+
+[node name="createUser" type="Button" parent="." unique_id=1688402930]
+layout_mode = 0
+offset_top = 169.0
+offset_right = 132.0
+offset_bottom = 200.0
+text = "create new user"
+
+[connection signal="button_down" from="login" to="." method="_on_login_button_down"]
+[connection signal="button_down" from="cancel" to="." method="_on_cancel_button_down"]
+[connection signal="button_down" from="createUser" to="." method="_on_create_user_button_down"]

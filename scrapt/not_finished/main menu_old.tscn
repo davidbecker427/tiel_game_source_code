@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cdc13faio641f"]
+
+[ext_resource type="Script" uid="uid://c6316itpccouf" path="res://code/main_menu.gd" id="1_7mewq"]
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="2_8srom"]
+[ext_resource type="PackedScene" uid="uid://shl4sxxfac4h" path="res://scrapt/not_finished/login_window.tscn" id="3_08rdw"]
+[ext_resource type="PackedScene" uid="uid://cajrsq7q4a007" path="res://scrapt/not_finished/create_user_window.tscn" id="4_xrxhh"]
+[ext_resource type="Script" uid="uid://lekceq3dulra" path="res://scrapt/not_finished/node.gd" id="5_qjylq"]
+
+[sub_resource type="Theme" id="Theme_8srom"]
+
+[node name="MainMenu" type="Node2D" unique_id=730392025]
+script = ExtResource("1_7mewq")
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=437487859]
+light_mask = 0
+position = Vector2(576, 324.06207)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("2_8srom")
+
+[node name="Control" type="Control" parent="." unique_id=8158236]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=355184524]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 31.0
+offset_right = 825.0
+offset_bottom = 168.0
+theme = SubResource("Theme_8srom")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "tiel game"
+horizontal_alignment = 1
+
+[node name="start" type="Button" parent="Control" unique_id=546736831]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 247.0
+offset_right = 699.0
+offset_bottom = 293.0
+text = "start"
+
+[node name="options" type="Button" parent="Control" unique_id=485176801]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 603.0
+offset_right = 703.0
+offset_bottom = 648.0
+text = "options"
+
+[node name="quit" type="Button" parent="Control" unique_id=1983969511]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 610.0
+offset_right = 1152.0
+offset_bottom = 647.0
+text = "quit"
+
+[node name="leaderboard" type="Button" parent="Control" unique_id=680259677]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 412.0
+offset_right = 704.0
+offset_bottom = 478.0
+text = "leaderboard"
+
+[node name="login window" parent="Control" unique_id=1692854269 instance=ExtResource("3_08rdw")]
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 272.0
+CreateUserWindow = ExtResource("4_xrxhh")
+
+[node name="Client" type="Node" parent="Control" unique_id=2130597107]
+script = ExtResource("5_qjylq")
+
+[connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/leaderboard" to="." method="_on_leaderboard_pressed"]

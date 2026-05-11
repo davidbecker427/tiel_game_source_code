@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dwrmvmbjg1xxh"]
+
+[ext_resource type="Texture2D" uid="uid://c6c2vadve4cgy" path="res://texturs/quiz1.png" id="1_n8ijn"]
+[ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="1_ywk03"]
+[ext_resource type="PackedScene" uid="uid://drisdlhhf1o2e" path="res://gamemanger/gamemanger.tscn" id="3_n8ijn"]
+
+[node name="Node2D" type="Node2D" unique_id=420110963]
+
+[node name="Node2D" parent="." unique_id=734122412 instance=ExtResource("3_n8ijn")]
+position = Vector2(95, -776)
+
+[node name="Quiz1" type="Sprite2D" parent="." unique_id=1266489933]
+position = Vector2(668.49994, -521)
+scale = Vector2(2.302, 1.292)
+texture = ExtResource("1_n8ijn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1220117135]
+position = Vector2(668, -520)
+scale = Vector2(1, 0.98449606)
+
+[node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_ywk03")]
