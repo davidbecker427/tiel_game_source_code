@@ -11,6 +11,7 @@ var d_active = false
 func _ready():
 	$NinePatchRect.visible = false
 	
+
 func start():
 	if d_active:
 		return
@@ -20,18 +21,21 @@ func start():
 	current_dialogue_id = -1
 	next_script()
 
+#laad de json file waar de dialoog instaad
 func load_dialogue():
 	var file = FileAccess.open("res://dialogue/Guide_dialogue1.json", FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
-	
 
+#waneer er op spatie wordt gedrukt dan gaat de naar de volgende lijn in de dialoog
 func _input(event):
 	if !d_active:
 		return
 	if event.is_action_pressed("ui_accept"):
 		next_script()
 
+#zegt wat die moet doen als als next scrip wordt gedruikt en wat die moet doen als
+#de dialoog klaar is
 func next_script():
 	current_dialogue_id += 1
 	if current_dialogue_id >= len(dialogue):
@@ -39,7 +43,7 @@ func next_script():
 		$NinePatchRect.visible = false
 		emit_signal("dialogue_finshed")
 		return
-	
+	#zet de naam en de text op de goede plek in de NinePatchRect
 	$NinePatchRect/Name.text = dialogue[current_dialogue_id]['name']
 	$NinePatchRect/Text.text = dialogue[current_dialogue_id]['text']
 	

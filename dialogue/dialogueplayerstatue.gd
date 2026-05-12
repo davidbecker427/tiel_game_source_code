@@ -1,5 +1,5 @@
 extends Control
-
+#de communts staan in de file dialueplayer.gd
 signal dialogue_finshed
 
 @export_file("*.json") var d_file
@@ -10,7 +10,7 @@ var d_active = false
 
 func _ready():
 	$NinePatchRect.visible = false
-	
+
 func start():
 	if d_active:
 		return

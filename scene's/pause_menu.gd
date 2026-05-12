@@ -1,9 +1,12 @@
 extends CanvasLayer
-
+#waneer de game wordt gestart dan kan je niet het menu zien
 func _ready() -> void:
 	visible = false
 	get_tree().paused = false
 
+#als op de ui cancel knop wordt gedrukt (esc) dan wordt het menu visable
+#en als het menu all visble was dan wordt het invisble als er weer op de knop
+#wordt gedrukt
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if get_tree().paused:

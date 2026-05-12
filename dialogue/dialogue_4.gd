@@ -1,5 +1,5 @@
 extends Control
-
+#de communts staan in de file dialueplayer.gd
 
 signal dialogue_finshed
 

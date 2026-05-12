@@ -1,6 +1,6 @@
 extends Node2D
 
-
+#als je op de start knop drukt ga je naar de instructie pagina
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene's/instructions.tscn")
 

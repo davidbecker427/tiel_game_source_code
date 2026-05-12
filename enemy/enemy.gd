@@ -7,12 +7,13 @@ var speed = 100
 var player = null
 var player_chase = false
 
+#zegt hoe de enemy moet moven
 func _physics_process(delta):
 	if player_chase and player != null:
 		var direction = (player.position - position).normalized()
 		velocity = direction * speed
 		
-		# animation
+		# de animations voor als die een bepaalde derectie op lopen
 		if abs(direction.x) > abs(direction.y):
 			if direction.x > 0:
 				$AnimatedSprite2D.play("walk_e")
