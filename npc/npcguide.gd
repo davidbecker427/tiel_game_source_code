@@ -31,7 +31,8 @@ func _process(delta):
 			$AnimatedSprite2D.play("walk_n")
 		if dir.y == 1:
 			$AnimatedSprite2D.play("walk_s")
-
+			
+#de random movement van de npc + dat die moet stoppen als de player met hem praat
 	if is_roaming:
 		match current_state:
 			IDLE:
@@ -58,7 +59,7 @@ func move(delta):
 		velocity = dir * speed
 		move_and_slide()
 
-
+#waneer de player in de chat detection area stapt dan kan de player met hem praten
 func _on_chat_detection_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
@@ -69,14 +70,15 @@ func _on_chat_detection_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_chat_zone = false
 
+#hoelang die moet wachten todat die weer kan lopen / ander random derectie op gaat
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
 	
 
 
-
+#waneer de dialoog klaar is / player uit de chat zone is 
+#dan gaat de npc weer random rond lopen
 func _on_dialogue_dialogue_finshed() -> void:
 	is_chatting = false
 	is_roaming = true
-	pass # Replace with function body.

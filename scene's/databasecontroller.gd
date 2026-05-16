@@ -1,5 +1,5 @@
 extends Control
-
+#
 var database : SQLite
 
 func _ready():
@@ -13,7 +13,7 @@ func _on_create_table_button_down() -> void:
 		"name" : {"data_type":"text" }
 	}
 	database.create_table("player", table)
-	pass # Replace with function body.
+	
 	
 	
 func _on_insert_data_button_down() -> void:
@@ -22,4 +22,3 @@ func _on_insert_data_button_down() -> void:
 	}
 	
 	database.insert_row("player", data)
-	pass # Replace with function body.
