@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://4pdsa02f23sl"]
+
+[ext_resource type="Script" uid="uid://c6316itpccouf" path="res://code/main_menu.gd" id="1_g58k3"]
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="2_ro7ao"]
+[ext_resource type="Script" uid="uid://dqbfgtg03i6qd" path="res://scene's/testdatabase.gd" id="3_27a4g"]
+[ext_resource type="PackedScene" uid="uid://cadbnluqs7hqp" path="res://collectable's/coin.tscn" id="4_27a4g"]
+[ext_resource type="PackedScene" uid="uid://b7sknxap448yw" path="res://player/player.tscn" id="5_074hl"]
+
+[sub_resource type="Theme" id="Theme_8srom"]
+
+[node name="MainMenu" type="Node2D" unique_id=730392025]
+script = ExtResource("1_g58k3")
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=437487859]
+light_mask = 0
+position = Vector2(576, 324.06207)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("2_ro7ao")
+
+[node name="Control" type="Control" parent="." unique_id=8158236]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_27a4g")
+
+[node name="title" type="Label" parent="Control" unique_id=355184524]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 31.0
+offset_right = 825.0
+offset_bottom = 168.0
+theme = SubResource("Theme_8srom")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "tiel game"
+horizontal_alignment = 1
+
+[node name="start" type="Button" parent="Control" unique_id=546736831]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 247.0
+offset_right = 699.0
+offset_bottom = 293.0
+text = "start"
+
+[node name="options" type="Button" parent="Control" unique_id=485176801]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 603.0
+offset_right = 703.0
+offset_bottom = 648.0
+text = "options"
+
+[node name="quit" type="Button" parent="Control" unique_id=1983969511]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 610.0
+offset_right = 1152.0
+offset_bottom = 647.0
+text = "quit"
+
+[node name="leaderboard" type="Button" parent="Control" unique_id=680259677]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 412.0
+offset_right = 704.0
+offset_bottom = 478.0
+text = "leaderboard"
+
+[node name="insert_data" type="Button" parent="Control" unique_id=1488791900]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 417.0
+offset_right = 138.0
+offset_bottom = 448.0
+text = "naam toevoegen"
+
+[node name="create table" type="Button" parent="Control" unique_id=66249524]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 301.0
+offset_right = 152.0
+offset_bottom = 342.0
+text = "create table"
+
+[node name="type_je_naam_in" type="Label" parent="Control" unique_id=1090410916]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 378.0
+offset_right = 300.0
+offset_bottom = 410.0
+text = "type je naam in"
+
+[node name="name" type="TextEdit" parent="Control" unique_id=708055432]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 415.0
+offset_right = 347.0
+offset_bottom = 457.0
+
+[node name="coin" parent="Control" unique_id=748108016 instance=ExtResource("4_27a4g")]
+position = Vector2(374, 300)
+
+[node name="coin2" parent="Control" unique_id=1685104444 instance=ExtResource("4_27a4g")]
+position = Vector2(464, 281)
+
+[node name="coin3" parent="Control" unique_id=1615123062 instance=ExtResource("4_27a4g")]
+position = Vector2(454, 321)
+
+[node name="player" parent="." unique_id=52804076 instance=ExtResource("5_074hl")]
+position = Vector2(449, 201)
+
+[connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="button_down" from="Control/insert_data" to="Control" method="_on_insert_data_button_down"]
+[connection signal="button_down" from="Control/create table" to="." method="_on_insert_data_button_down"]
+[connection signal="button_down" from="Control/create table" to="Control" method="_on_insert_data_button_down"]
+[connection signal="button_down" from="Control/create table" to="Control" method="_on_create_table_button_down"]

@@ -75,13 +75,14 @@ offset_left = 1.0
 offset_top = 417.0
 offset_right = 138.0
 offset_bottom = 448.0
-text = "insert data"
+text = "naam toevoegen"
 
 [node name="create table" type="Button" parent="Control" unique_id=66249524]
 layout_mode = 0
-offset_top = 301.0
-offset_right = 148.0
-offset_bottom = 342.0
+offset_left = -211.0
+offset_top = 293.0
+offset_right = -63.0
+offset_bottom = 334.0
 text = "create table"
 
 [node name="type_je_naam_in" type="Label" parent="Control" unique_id=1090410916]

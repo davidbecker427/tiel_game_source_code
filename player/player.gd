@@ -1,12 +1,14 @@
 extends CharacterBody2D
 #geeft aan hoe snell de player is
 @export var speed = 200
-
 @onready var coin_label = %Label
 
 var coin_counter = 0
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
+
+func _ready():
+	add_to_group("player")
 
 #pakt de movement inputs op
 func get_input():
