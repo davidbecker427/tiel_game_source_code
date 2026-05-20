@@ -1,7 +1,7 @@
 extends Control
 
 var database : SQLite
-@onready var player = get_tree().get_first_node_in_group("player")
+@export var player : CharacterBody2D
 
 func _ready():
 	database = SQLite.new()
@@ -12,7 +12,7 @@ func _on_create_table_button_down() -> void:
 	var table = {
 		"id" : {"data_type":"int", "primary_key": true, "not_null" : true, "auto_increment" : true },
 		"name" : {"data_type":"text" },
-		"score" : {"data_type": "text"}
+		"score" : {"data_type": "int"}
 	}
 	database.create_table("playertest", table)
 	
@@ -21,7 +21,6 @@ func _on_create_table_button_down() -> void:
 func _on_insert_data_button_down() -> void:
 	var data = {
 		"name" : $name.text,
-		"score" : (player.coin_label.text)
+		"score" : player.coin_counter
 	}
-	
-	database.insert_row("playertest", data)
+	var success = database.insert_row("playertest", data)

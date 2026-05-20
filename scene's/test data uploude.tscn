@@ -97,10 +97,17 @@ text = "type je naam in"
 
 [node name="name" type="TextEdit" parent="Control" unique_id=708055432]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 415.0
-offset_right = 347.0
-offset_bottom = 457.0
+offset_left = 163.0
+offset_top = 410.0
+offset_right = 352.0
+offset_bottom = 452.0
+
+[node name="score" type="TextEdit" parent="Control" unique_id=1775734811]
+layout_mode = 0
+offset_left = -248.0
+offset_top = 489.0
+offset_right = -53.0
+offset_bottom = 527.0
 
 [node name="coin" parent="Control" unique_id=748108016 instance=ExtResource("4_27a4g")]
 position = Vector2(374, 300)
@@ -112,7 +119,7 @@ position = Vector2(464, 281)
 position = Vector2(454, 321)
 
 [node name="player" parent="." unique_id=52804076 instance=ExtResource("5_074hl")]
-position = Vector2(449, 201)
+position = Vector2(351, 227)
 
 [connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
