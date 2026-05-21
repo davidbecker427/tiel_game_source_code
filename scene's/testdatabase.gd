@@ -1,7 +1,7 @@
 extends Control
 
 var database : SQLite
-@export var player : CharacterBody2D
+@onready var player = get_node("../player")
 
 func _ready():
 	database = SQLite.new()
