@@ -11,18 +11,48 @@ anchors_preset = 0
 offset_right = 18.0
 offset_bottom = 30.0
 
-[node name="TextEdit" type="TextEdit" parent="Control" unique_id=1804412879]
-layout_mode = 0
-offset_left = 495.0
-offset_top = 313.0
-offset_right = 656.0
-offset_bottom = 356.0
-text = "test leaderboard"
-
 [node name="back_to_main_menu" type="Button" parent="Control" unique_id=1945781381]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_top = 1.0
+offset_right = 157.0
+offset_bottom = 32.0
 text = "back to main menu"
+
+[node name="dit_zijn_de_top_3_scorens" type="Label" parent="Control" unique_id=480442831]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 36.0
+offset_right = 783.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 37
+text = "dit zijn de top 3 scorens"
+horizontal_alignment = 1
+
+[node name="naam1" type="Label" parent="Control" unique_id=282426689]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 108.0
+offset_right = 632.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 27
+text = "name 1"
+
+[node name="naam2" type="Label" parent="Control" unique_id=281781500]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 160.0
+offset_right = 638.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 27
+text = "naam 2"
+
+[node name="naam3" type="Label" parent="Control" unique_id=34416167]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 209.0
+offset_right = 637.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 27
+text = "naam 3"
 
 [connection signal="pressed" from="Control/back_to_main_menu" to="." method="_on_back_to_main_menu_pressed"]
