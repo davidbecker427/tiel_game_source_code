@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c6c2vadve4cgy" path="res://texturs/quiz1.png" id="1_n8ijn"]
 [ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="1_ywk03"]
 [ext_resource type="PackedScene" uid="uid://drisdlhhf1o2e" path="res://gamemanger/gamemanger.tscn" id="3_n8ijn"]
+[ext_resource type="PackedScene" uid="uid://b7sknxap448yw" path="res://player/player.tscn" id="4_0glme"]
+[ext_resource type="PackedScene" uid="uid://cadbnluqs7hqp" path="res://collectable's/coin.tscn" id="5_m8muf"]
 
 [node name="Node2D" type="Node2D" unique_id=420110963]
 
@@ -19,3 +21,15 @@ position = Vector2(668, -520)
 scale = Vector2(1, 0.98449606)
 
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_ywk03")]
+
+[node name="player" parent="." unique_id=52804076 instance=ExtResource("4_0glme")]
+position = Vector2(797, -579)
+
+[node name="coin" parent="." unique_id=748108016 instance=ExtResource("5_m8muf")]
+position = Vector2(1036, -467)
+
+[node name="coin2" parent="." unique_id=1473389075 instance=ExtResource("5_m8muf")]
+position = Vector2(949, -428)
+
+[node name="coin3" parent="." unique_id=323978946 instance=ExtResource("5_m8muf")]
+position = Vector2(1102, -390)

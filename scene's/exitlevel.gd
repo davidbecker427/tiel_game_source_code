@@ -1,6 +1,13 @@
 extends Area2D
-
+var database : SQLite
 var entered = false
+@onready var player = get_node("../player")
+
+
+func _ready():
+	database = SQLite.new()
+	database.path="res://data.db"
+	database.open_db()
 
 func _on_body_entered(body: CharacterBody2D):
 	if body.name == "player":
@@ -15,4 +22,9 @@ func _on_body_exited(body: CharacterBody2D):
 func _process(delta):
 	if entered:
 		if Input.is_action_just_pressed("exit_level"):
+			var data = {
+				"score" : Gamemanger.coin_counter,
+				"name" : Gamemanger.player_name
+			}
+			var success = database.insert_row("playertest", data)
 			get_tree().change_scene_to_file("res://scene's/quizvraag1.tscn")

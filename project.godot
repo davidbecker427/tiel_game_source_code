@@ -20,8 +20,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-Player="*uid://ciix2drr0g0l7"
-Gamemanger="*uid://dvcunx5lcicx4"
+Gamemanger="*uid://ciylhdsho28sx"
 
 [display]
 

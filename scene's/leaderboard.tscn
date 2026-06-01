@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvu3cyosf3jxe"]
+[gd_scene format=3 uid="uid://cvu3cyosf3jxe"]
 
 [ext_resource type="Script" uid="uid://bmmut0m7mgrhk" path="res://code/leaderboard.gd" id="1_nhctf"]
 
-[node name="Leaderboard" type="Node2D"]
+[node name="Leaderboard" type="Node2D" unique_id=1524899693]
 script = ExtResource("1_nhctf")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=435403303]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 18.0
 offset_bottom = 30.0
 
-[node name="TextEdit" type="TextEdit" parent="Control"]
+[node name="TextEdit" type="TextEdit" parent="Control" unique_id=1804412879]
 layout_mode = 0
 offset_left = 495.0
 offset_top = 313.0
@@ -19,7 +19,7 @@ offset_right = 656.0
 offset_bottom = 356.0
 text = "test leaderboard"
 
-[node name="back_to_main_menu" type="Button" parent="Control"]
+[node name="back_to_main_menu" type="Button" parent="Control" unique_id=1945781381]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0

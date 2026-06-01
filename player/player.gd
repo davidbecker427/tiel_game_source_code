@@ -3,12 +3,13 @@ extends CharacterBody2D
 @export var speed = 200
 @onready var coin_label = %Label
 
-var coin_counter = 0
+
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 
 func _ready():
 	add_to_group("player")
+	update_coin_label()
 
 #pakt de movement inputs op
 func get_input():
@@ -22,13 +23,17 @@ func _physics_process(_delta):
 #als er een coin wordt gecollect dan gaat er +1 by de counter
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("coin"):
-		set_coin(coin_counter + 1)
-		print(coin_counter)
+		set_coin(Gamemanger.coin_counter + 1)
+		print(Gamemanger.coin_counter)
 
 func set_coin(new_coin_count : int) -> void:
-	coin_counter = new_coin_count
-	coin_label.text = "coin count: " + str(coin_counter)
+	Gamemanger.coin_counter = new_coin_count
+	update_coin_label()
 	
 func lose_coin(amount: int) -> void:
-	coin_counter = max(0, coin_counter - amount)
-	coin_label.text = "coin count: " + str(coin_counter)
+	Gamemanger.coin_counter = max(0, Gamemanger.coin_counter - amount)
+	update_coin_label()
+
+
+func update_coin_label():
+	coin_label.text = "coin count: " + str(Gamemanger.coin_counter)
