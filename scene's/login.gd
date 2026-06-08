@@ -14,16 +14,23 @@ func _on_naar_registraatie_pressed() -> void:
 func _on_inlogen_pressed() -> void:
 	var username = $username_inputfield.text
 	var password = $wachtwoord_inputfield.text
-
+	
 	var password_hash = password.sha256_text()
-
-	var query = "SELECT * FROM playerdata WHERE name = '%s'" % username
-
-	database.query(query)
-
-	if database.query_result.size() > 0:
-		var user = database.query_result[0]
-
-		if user["password"] == password_hash:
-			get_tree().change_scene_to_file("res://scene's/main menu.tscn")
-	Gamemanger.player_name = $username_inputfield.text
+	database.query_with_bindings(
+		"SELECT * FROM playerdata WHERE name = ?",
+		[username]
+	)
+	
+	if database.query_result.size() == 0:
+		print("dit acount bestaat niet")
+		return
+	
+	var user = database.query_result[0]
+	
+	if user["password"] != password_hash:
+		print("dit wachtwoord is niet juist")
+		return
+	
+	Gamemanger.player_name = user["name"]
+	Gamemanger.current_player_id = user["id"]
+	get_tree().change_scene_to_file("res://scene's/main menu.tscn")

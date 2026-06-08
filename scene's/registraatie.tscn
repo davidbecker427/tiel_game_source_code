@@ -13,10 +13,10 @@ script = ExtResource("1_0vqm4")
 
 [node name="create_database_score" type="Button" parent="Control" unique_id=1785386743]
 layout_mode = 0
-offset_left = -445.0
-offset_top = 324.0
-offset_right = -260.0
-offset_bottom = 355.0
+offset_left = 11.0
+offset_top = 308.0
+offset_right = 196.0
+offset_bottom = 339.0
 text = "create database score"
 
 [node name="create_database_player" type="Button" parent="Control" unique_id=1873300796]
