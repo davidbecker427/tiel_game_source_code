@@ -71,3 +71,4 @@ offset_bottom = 478.0
 text = "inlogen"
 
 [connection signal="pressed" from="Control/naar_registraatie" to="Control" method="_on_naar_registraatie_pressed"]
+[connection signal="pressed" from="Control/inlogen" to="Control" method="_on_inlogen_pressed"]

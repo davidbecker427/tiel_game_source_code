@@ -20,10 +20,10 @@ text = "create database score"
 
 [node name="create_database_player" type="Button" parent="Control" unique_id=1873300796]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 376.0
-offset_right = 188.0
-offset_bottom = 407.0
+offset_left = -186.0
+offset_top = 385.0
+offset_right = -1.0
+offset_bottom = 416.0
 text = "create database player"
 
 [node name="terug_naar_login" type="Button" parent="Control" unique_id=711670092]
@@ -74,5 +74,16 @@ offset_right = 714.0
 offset_bottom = 400.0
 placeholder_text = "wachtwoord"
 
+[node name="create_acount" type="Button" parent="Control" unique_id=586745337]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 408.0
+offset_right = 525.0
+offset_bottom = 439.0
+text = "create acount"
+
 [connection signal="pressed" from="Control/create_database_score" to="Control" method="_on_create_database_score_pressed"]
+[connection signal="pressed" from="Control/create_database_player" to="Control" method="_on_create_database_player_pressed"]
 [connection signal="pressed" from="Control/terug_naar_login" to="." method="_on_terug_naar_login_pressed"]
+[connection signal="pressed" from="Control/terug_naar_login" to="Control" method="_on_terug_naar_login_pressed"]
+[connection signal="pressed" from="Control/create_acount" to="Control" method="_on_create_acount_pressed"]
