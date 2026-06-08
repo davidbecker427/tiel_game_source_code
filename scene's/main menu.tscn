@@ -56,9 +56,9 @@ text = "options"
 [node name="quit" type="Button" parent="Control" unique_id=1983969511]
 layout_mode = 0
 offset_left = 984.0
-offset_top = 610.0
+offset_top = 611.0
 offset_right = 1152.0
-offset_bottom = 647.0
+offset_bottom = 648.0
 text = "quit"
 
 [node name="leaderboard" type="Button" parent="Control" unique_id=680259677]
@@ -69,14 +69,6 @@ offset_right = 704.0
 offset_bottom = 478.0
 text = "leaderboard"
 
-[node name="insert_data" type="Button" parent="Control" unique_id=1488791900]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 417.0
-offset_right = 138.0
-offset_bottom = 448.0
-text = "naam toevoegen"
-
 [node name="create table" type="Button" parent="Control" unique_id=66249524]
 layout_mode = 0
 offset_left = -211.0
@@ -85,26 +77,19 @@ offset_right = -63.0
 offset_bottom = 334.0
 text = "create table"
 
-[node name="type_je_naam_in" type="Label" parent="Control" unique_id=1090410916]
+[node name="uitloggen" type="Button" parent="Control" unique_id=728302929]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 378.0
-offset_right = 300.0
-offset_bottom = 410.0
-text = "type je naam in"
-
-[node name="name" type="TextEdit" parent="Control" unique_id=708055432]
-layout_mode = 0
-offset_left = 158.0
-offset_top = 415.0
-offset_right = 347.0
-offset_bottom = 457.0
+offset_left = 1.0
+offset_top = 614.0
+offset_right = 186.0
+offset_bottom = 648.0
+text = "uitloggen"
 
 [connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Control/leaderboard" to="." method="_on_leaderboard_pressed"]
-[connection signal="button_down" from="Control/insert_data" to="Control" method="_on_insert_data_button_down"]
 [connection signal="button_down" from="Control/create table" to="." method="_on_insert_data_button_down"]
 [connection signal="button_down" from="Control/create table" to="Control" method="_on_insert_data_button_down"]
 [connection signal="button_down" from="Control/create table" to="Control" method="_on_create_table_button_down"]
+[connection signal="pressed" from="Control/uitloggen" to="Control" method="_on_uitloggen_pressed"]

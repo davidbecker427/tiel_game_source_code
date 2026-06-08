@@ -47,6 +47,6 @@ func _on_create_database_score_pressed() -> void:
 	var table = {
 		"id" : {"data_type":"int", "primary_key": true, "not_null" : true, "auto_increment" : true },
 		"score" : {"data_type":"int" },
-		"password" : {"data_type": "text"}
+		"datum" : {"data_type": "datetime"}
 	}
-	database.create_table("playerdata", table)
+	database.create_table("playerscore", table)

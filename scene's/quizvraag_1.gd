@@ -13,9 +13,9 @@ func _on_button_pressed() -> void:
 	set_coin(Gamemanger.coin_counter + 10)
 	var data = {
 		"score" : Gamemanger.coin_counter,
-		"name" : Gamemanger.player_name
+		"datum": Time.get_datetime_string_from_system()
 	}
-	var success = database.insert_row("playertest", data)
+	var success = database.insert_row("playerscore", data)
 	get_tree().change_scene_to_file("res://scene's/goedantwoordscherm.tscn")
 
 func set_coin(new_coin_count : int) -> void:
@@ -29,25 +29,25 @@ func _on_fout_antwoord_1_pressed() -> void:
 	set_coin(Gamemanger.coin_counter - 10)
 	var data = {
 		"score" : Gamemanger.coin_counter,
-		"name" : Gamemanger.player_name
+		"datum": Time.get_datetime_string_from_system()
 	}
-	var success = database.insert_row("playertest", data)
+	var success = database.insert_row("playerscore", data)
 	get_tree().change_scene_to_file("res://scene's/foutantwoordt.tscn")
 
 func _on_fout_antwoord_2_pressed() -> void:
 	set_coin(Gamemanger.coin_counter - 10)
 	var data = {
 		"score" : Gamemanger.coin_counter,
-		"name" : Gamemanger.player_name
+		"datum": Time.get_datetime_string_from_system()
 	}
-	var success = database.insert_row("playertest", data)
+	var success = database.insert_row("playerscore", data)
 	get_tree().change_scene_to_file("res://scene's/foutantwoordt.tscn")
 
 func _on_fout_antwoord_3_pressed() -> void:
 	set_coin(Gamemanger.coin_counter - 10)
 	var data = {
 		"score" : Gamemanger.coin_counter,
-		"name" : Gamemanger.player_name
+		"datum": Time.get_datetime_string_from_system()
 	}
-	var success = database.insert_row("playertest", data)
+	var success = database.insert_row("playerscore", data)
 	get_tree().change_scene_to_file("res://scene's/foutantwoordt.tscn")

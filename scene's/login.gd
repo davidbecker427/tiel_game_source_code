@@ -26,3 +26,4 @@ func _on_inlogen_pressed() -> void:
 
 		if user["password"] == password_hash:
 			get_tree().change_scene_to_file("res://scene's/main menu.tscn")
+	Gamemanger.player_name = $username_inputfield.text

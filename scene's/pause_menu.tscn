@@ -7,38 +7,37 @@ process_mode = 3
 script = ExtResource("1_hdmo1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=270587150]
-offset_left = -5194.0
-offset_top = 423.0
-offset_right = -4042.0
-offset_bottom = 1071.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 649.0
 color = Color(0, 0, 0, 0.60784316)
 
 [node name="quit" type="Button" parent="." unique_id=1945288835]
-offset_left = -4748.0
-offset_top = 957.0
-offset_right = -4433.0
-offset_bottom = 1012.0
+offset_left = 442.0
+offset_top = 537.0
+offset_right = 757.0
+offset_bottom = 592.0
 text = "quit"
 
 [node name="resume" type="Button" parent="." unique_id=859008609]
-offset_left = -4842.0
-offset_top = 478.0
-offset_right = -4354.0
-offset_bottom = 576.0
+offset_left = 348.0
+offset_top = 58.0
+offset_right = 836.0
+offset_bottom = 156.0
 text = "resume"
 
 [node name="back_to_main_menu" type="Button" parent="." unique_id=2063409349]
-offset_left = -4848.0
-offset_top = 742.0
-offset_right = -4352.0
-offset_bottom = 864.0
+offset_left = 342.0
+offset_top = 322.0
+offset_right = 838.0
+offset_bottom = 444.0
 text = "back to main menu"
 
 [node name="to_leaderboard" type="Button" parent="." unique_id=1639194995]
-offset_left = -4848.0
-offset_top = 595.0
-offset_right = -4357.0
-offset_bottom = 676.0
+offset_left = 342.0
+offset_top = 175.0
+offset_right = 833.0
+offset_bottom = 256.0
 text = "naar leaderboard"
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

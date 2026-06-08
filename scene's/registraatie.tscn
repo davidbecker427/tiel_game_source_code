@@ -13,17 +13,18 @@ script = ExtResource("1_0vqm4")
 
 [node name="create_database_score" type="Button" parent="Control" unique_id=1785386743]
 layout_mode = 0
-offset_top = 310.0
-offset_right = 185.0
-offset_bottom = 341.0
+offset_left = -445.0
+offset_top = 324.0
+offset_right = -260.0
+offset_bottom = 355.0
 text = "create database score"
 
 [node name="create_database_player" type="Button" parent="Control" unique_id=1873300796]
 layout_mode = 0
-offset_left = -186.0
-offset_top = 385.0
-offset_right = -1.0
-offset_bottom = 416.0
+offset_left = -431.0
+offset_top = 372.0
+offset_right = -246.0
+offset_bottom = 403.0
 text = "create database player"
 
 [node name="terug_naar_login" type="Button" parent="Control" unique_id=711670092]

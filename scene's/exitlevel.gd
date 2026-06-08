@@ -24,7 +24,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("exit_level"):
 			var data = {
 				"score" : Gamemanger.coin_counter,
-				"name" : Gamemanger.player_name
+				"datum": Time.get_datetime_string_from_system()
 			}
-			var success = database.insert_row("playertest", data)
+			var success = database.insert_row("playerscore", data)
 			get_tree().change_scene_to_file("res://scene's/quizvraag1.tscn")

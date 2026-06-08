@@ -17,6 +17,7 @@ func _on_create_table_button_down() -> void:
 	database.create_table("playertest", table)
 	
 	
-	
-func _on_insert_data_button_down() -> void:
-	Gamemanger.player_name = $name.text
+
+
+func _on_uitloggen_pressed() -> void:
+	get_tree().change_scene_to_file("res://scene's/loggin.tscn")
