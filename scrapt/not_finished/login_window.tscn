@@ -1,12 +1,38 @@
-[gd_scene format=3 uid="uid://shl4sxxfac4h"]
+[gd_scene format=3 uid="uid://d1823vlap6wcs"]
 
-[ext_resource type="Script" uid="uid://d32b8srs6c5kb" path="res://scrapt/not_finished/login_window.gd" id="1_kdjmr"]
+[sub_resource type="GDScript" id="GDScript_ajgwr"]
+script/source = "#extends Panel
+
+#signal LoginUser(user, password)
+#signal CreateUser(user, password)
+
+#@export var CreateUserWindow : PackedScene
+
+#func _on_cancel_button_down() -> void:
+#	queue_free()
+#	pass # Replace with function body.
+
+
+
+#func _on_create_user_button_down() -> void:
+#	var createUserWindow = CreateUserWindow.instantiate()
+#	add_child(createUserWindow)
+#	createUserWindow.CreateUser.connect()
+#	pass # Replace with function body.
+
+#func createUser(name, password):
+#	CreateUser.emit(name, password)
+
+#func _on_login_button_down() -> void:
+#	LoginUser.emit($Username.text, $Password.text)
+#	pass # Replace with function body.
+"
 
 [node name="login window" type="Panel" unique_id=1692854269]
 offset_top = 376.0
 offset_right = 331.0
 offset_bottom = 648.0
-script = ExtResource("1_kdjmr")
+script = SubResource("GDScript_ajgwr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=359241490]
 layout_mode = 0

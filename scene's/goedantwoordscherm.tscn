@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://x6vt00p3yucy"]
+
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_st4wl"]
+[ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="2_vq5m0"]
+[ext_resource type="Script" uid="uid://cd2tauj2mck2g" path="res://scene's/goedgedaan.gd" id="3_vq5m0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st4wl"]
+bg_color = Color(0.4629951, 0.64247894, 0.11379231, 1)
+
+[node name="Node2D" type="Node2D" unique_id=25554990]
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=966367517]
+light_mask = 0
+position = Vector2(576, 324.06207)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_st4wl")
+
+[node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("2_vq5m0")]
+
+[node name="Control" type="Control" parent="." unique_id=1542762278]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_vq5m0")
+
+[node name="goed_gedaan_hulp" type="Label" parent="Control" unique_id=316964853]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 148.0
+offset_right = 1035.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_st4wl")
+text = "goed gedaan!!!!
+je kan links boven in de totaal scoren zien 
+je kan ook nog naar de main menu toe gaan als je op de terug naar main menu knop drukt
+je kan ook nog naar de leaderboord gaan en de top 3 scorens zien"
+horizontal_alignment = 1
+
+[node name="goed_antwoord" type="Label" parent="Control" unique_id=1771533394]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 100.0
+offset_right = 806.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 26
+text = "dat was het goede antwoord!!!"
+
+[node name="label" type="Label" parent="Control" unique_id=1748912837]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_right = 98.0
+offset_bottom = 23.0
+text = "coin count 0"
+
+[node name="leaderboard" type="Button" parent="Control" unique_id=1668304221]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 301.0
+offset_right = 999.0
+offset_bottom = 332.0
+text = "naar leadrboard"
+
+[node name="main_menu" type="Button" parent="Control" unique_id=286465068]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 291.0
+offset_right = 324.0
+offset_bottom = 322.0
+text = "terug naar main menu"
+
+[connection signal="pressed" from="Control/leaderboard" to="Control" method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Control/main_menu" to="Control" method="_on_main_menu_pressed"]

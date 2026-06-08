@@ -1,35 +1,98 @@
 [gd_scene format=3 uid="uid://dwrmvmbjg1xxh"]
 
+[ext_resource type="Script" uid="uid://s6rjuantdpfx" path="res://scene's/quizvraag_1.gd" id="1_0glme"]
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_m8muf"]
 [ext_resource type="Texture2D" uid="uid://c6c2vadve4cgy" path="res://texturs/quiz1.png" id="1_n8ijn"]
 [ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="1_ywk03"]
 [ext_resource type="PackedScene" uid="uid://drisdlhhf1o2e" path="res://gamemanger/gamemanger.tscn" id="3_n8ijn"]
-[ext_resource type="PackedScene" uid="uid://b7sknxap448yw" path="res://player/player.tscn" id="4_0glme"]
-[ext_resource type="PackedScene" uid="uid://cadbnluqs7hqp" path="res://collectable's/coin.tscn" id="5_m8muf"]
 
 [node name="Node2D" type="Node2D" unique_id=420110963]
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=1443740783]
+light_mask = 0
+position = Vector2(1038, -1108)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_m8muf")
+
+[node name="Camera2D" type="Camera2D" parent="MapMenu" unique_id=1220117135]
+position = Vector2(0, 2.782959)
+scale = Vector2(0.7725695, 0.91326445)
 
 [node name="Node2D" parent="." unique_id=734122412 instance=ExtResource("3_n8ijn")]
 position = Vector2(95, -776)
 
 [node name="Quiz1" type="Sprite2D" parent="." unique_id=1266489933]
-position = Vector2(668.49994, -521)
+position = Vector2(-645, 325.99994)
 scale = Vector2(2.302, 1.292)
 texture = ExtResource("1_n8ijn")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1220117135]
-position = Vector2(668, -520)
-scale = Vector2(1, 0.98449606)
-
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_ywk03")]
 
-[node name="player" parent="." unique_id=52804076 instance=ExtResource("4_0glme")]
-position = Vector2(797, -579)
+[node name="Control" type="Control" parent="." unique_id=227627640]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0glme")
 
-[node name="coin" parent="." unique_id=748108016 instance=ExtResource("5_m8muf")]
-position = Vector2(1036, -467)
+[node name="Label" type="Label" parent="Control" unique_id=1282414640]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 470.0
+offset_top = -1431.0
+offset_right = 565.0
+offset_bottom = -1408.0
+text = "coin count 0"
 
-[node name="coin2" parent="." unique_id=1473389075 instance=ExtResource("5_m8muf")]
-position = Vector2(949, -428)
+[node name="goed_antwoord" type="Button" parent="Control" unique_id=1723337086]
+layout_mode = 0
+offset_left = 613.0
+offset_top = -1110.0
+offset_right = 809.0
+offset_bottom = -1056.0
+text = "de 30 militare van tiel 
+die vochten in WWII"
 
-[node name="coin3" parent="." unique_id=323978946 instance=ExtResource("5_m8muf")]
-position = Vector2(1102, -390)
+[node name="Label2" type="Label" parent="Control" unique_id=1473804276]
+layout_mode = 0
+offset_left = 666.0
+offset_top = -1315.0
+offset_right = 1376.0
+offset_bottom = -1276.0
+theme_override_font_sizes/font_size = 28
+text = "wat herdenkd het monument van de gevallen krijger"
+
+[node name="fout_antwoord2" type="Button" parent="Control" unique_id=1141393382]
+layout_mode = 0
+offset_left = 1108.0
+offset_top = -1122.0
+offset_right = 1303.0
+offset_bottom = -1060.0
+text = "de 100 militare van tiel
+die vochten in WWII"
+
+[node name="fout_antwoord3" type="Button" parent="Control" unique_id=2102804945]
+layout_mode = 0
+offset_left = 1108.0
+offset_top = -975.0
+offset_right = 1303.0
+offset_bottom = -898.0
+text = "alle joden die
+dood zijn gegaan
+in WWII"
+
+[node name="fout_antwoord1" type="Button" parent="Control" unique_id=680365512]
+layout_mode = 0
+offset_left = 618.0
+offset_top = -959.0
+offset_right = 813.0
+offset_bottom = -882.0
+text = "all mensen die dood zijn 
+gegaan in tiel
+in WWII"
+
+[connection signal="pressed" from="Control/goed_antwoord" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/goed_antwoord" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord2" to="Control" method="_on_fout_antwoord_2_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord3" to="Control" method="_on_fout_antwoord_3_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord1" to="Control" method="_on_fout_antwoord_1_pressed"]

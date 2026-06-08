@@ -1,39 +1,73 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbcjnvopqdpjc"]
+[gd_scene format=3 uid="uid://dbcjnvopqdpjc"]
 
-[ext_resource type="Script" uid="uid://co1nmof0uux4q" path="res://code/loggin.gd" id="1_icopu"]
+[ext_resource type="Script" uid="uid://b3sc0cinvdrro" path="res://scene's/login.gd" id="1_icopu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_icopu"]
+[node name="Loggin" type="Node2D" unique_id=339501303]
 
-[node name="Loggin" type="Node2D"]
-script = ExtResource("1_icopu")
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1909262539]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_icopu")
 
-[node name="TextEdit" type="TextEdit" parent="Control"]
+[node name="login_label" type="Label" parent="Control" unique_id=1266092751]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 252.0
-offset_right = 560.0
-offset_bottom = 303.0
-text = "test loggin"
+offset_left = 481.0
+offset_top = 35.0
+offset_right = 632.0
+offset_bottom = 123.0
+theme_override_font_sizes/font_size = 64
+text = "login"
 
-[node name="back_to_main_menu" type="Button" parent="Control"]
+[node name="username_label" type="Label" parent="Control" unique_id=1660625636]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "back to main menu"
+offset_left = 362.0
+offset_top = 184.0
+offset_right = 508.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 30
+text = "username"
 
-[node name="naar_registraatie" type="Button" parent="Control"]
-offset_left = -1.0
-offset_top = 590.0
-offset_right = 376.0
+[node name="username_inputfield" type="TextEdit" parent="Control" unique_id=1147646762]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 225.0
+offset_right = 829.0
+offset_bottom = 278.0
+placeholder_text = "username here"
+
+[node name="wachtwoord_Label" type="Label" parent="Control" unique_id=898913352]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 318.0
+offset_right = 550.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 30
+text = "wachtwoord"
+
+[node name="wachtwoord_inputfield" type="TextEdit" parent="Control" unique_id=1663054063]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 384.0
+offset_right = 840.0
+offset_bottom = 444.0
+placeholder_text = "wachtwoord here"
+
+[node name="naar_registraatie" type="Button" parent="Control" unique_id=1902667244]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 618.0
+offset_right = 452.0
 offset_bottom = 649.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_icopu")
-text = "geen acount? click hier om een acount temaken"
+text = "heb je nog geen acount click here om er een aan temaken"
 
-[connection signal="pressed" from="Control/back_to_main_menu" to="." method="_on_back_to_main_menu_pressed"]
-[connection signal="pressed" from="Control/naar_registraatie" to="." method="_on_naar_registraatie_pressed"]
+[node name="inlogen" type="Button" parent="Control" unique_id=1909216808]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 447.0
+offset_right = 441.0
+offset_bottom = 478.0
+text = "inlogen"
+
+[connection signal="pressed" from="Control/naar_registraatie" to="Control" method="_on_naar_registraatie_pressed"]

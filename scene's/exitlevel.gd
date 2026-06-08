@@ -27,4 +27,4 @@ func _process(delta):
 				"name" : Gamemanger.player_name
 			}
 			var success = database.insert_row("playertest", data)
-			get_tree().change_scene_to_file("res://scene's/leaderboard.tscn")
+			get_tree().change_scene_to_file("res://scene's/quizvraag1.tscn")

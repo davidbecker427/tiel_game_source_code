@@ -1,20 +1,78 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs4daahkulg2g"]
+[gd_scene format=3 uid="uid://bs4daahkulg2g"]
 
-[ext_resource type="Script" uid="uid://dj8veh57rnt8c" path="res://code/registraatie.gd" id="1_0vqm4"]
+[ext_resource type="Script" uid="uid://cnlpvr4cl6jet" path="res://scene's/registraatie.gd" id="1_0vqm4"]
 
-[node name="Registraatie" type="Node2D"]
-script = ExtResource("1_0vqm4")
+[node name="Registraatie" type="Node2D" unique_id=1246187062]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=435303486]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_0vqm4")
 
-[node name="terug_naar_login" type="Button" parent="Control"]
+[node name="create_database_score" type="Button" parent="Control" unique_id=1785386743]
+layout_mode = 0
+offset_top = 310.0
+offset_right = 185.0
+offset_bottom = 341.0
+text = "create database score"
+
+[node name="create_database_player" type="Button" parent="Control" unique_id=1873300796]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 376.0
+offset_right = 188.0
+offset_bottom = 407.0
+text = "create database player"
+
+[node name="terug_naar_login" type="Button" parent="Control" unique_id=711670092]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "terug naar login"
 
+[node name="registraatie_Label" type="Label" parent="Control" unique_id=458718824]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 77.0
+offset_right = 682.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 50
+text = "registraatie"
+
+[node name="username_Label" type="Label" parent="Control" unique_id=546229114]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 173.0
+offset_right = 534.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 26
+text = "username"
+
+[node name="username_regestraatie" type="TextEdit" parent="Control" unique_id=1755199006]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 211.0
+offset_right = 740.0
+offset_bottom = 255.0
+placeholder_text = "username here"
+
+[node name="wachtwoord_Label" type="Label" parent="Control" unique_id=28528070]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 317.0
+offset_right = 502.0
+offset_bottom = 340.0
+text = "wachtwoord"
+
+[node name="wachtwoord_regestraatie" type="TextEdit" parent="Control" unique_id=2098748058]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 350.0
+offset_right = 714.0
+offset_bottom = 400.0
+placeholder_text = "wachtwoord"
+
+[connection signal="pressed" from="Control/create_database_score" to="Control" method="_on_create_database_score_pressed"]
 [connection signal="pressed" from="Control/terug_naar_login" to="." method="_on_terug_naar_login_pressed"]
