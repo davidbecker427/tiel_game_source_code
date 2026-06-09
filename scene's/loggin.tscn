@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://dbcjnvopqdpjc"]
 
 [ext_resource type="Script" uid="uid://b3sc0cinvdrro" path="res://scene's/login.gd" id="1_icopu"]
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_j4dxy"]
 
 [node name="Loggin" type="Node2D" unique_id=339501303]
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=192774815]
+light_mask = 0
+position = Vector2(576, 324.06207)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_j4dxy")
 
 [node name="Control" type="Control" parent="." unique_id=1909262539]
 layout_mode = 3

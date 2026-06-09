@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bmmut0m7mgrhk" path="res://code/leaderboard.gd" id="1_nhctf"]
 [ext_resource type="Script" uid="uid://qvis84bi63fc" path="res://scene's/leadrboardscript.gd" id="2_15slg"]
+[ext_resource type="Texture2D" uid="uid://c5ftp1adh5c3f" path="res://texturs/bluebackground.jpg" id="2_kd6bh"]
 
 [node name="Leaderboard" type="Node2D" unique_id=1524899693]
 script = ExtResource("1_nhctf")
+
+[node name="Bluebackground" type="Sprite2D" parent="." unique_id=1472939506]
+position = Vector2(576.5, 325.5)
+scale = Vector2(0.63722223, 0.36055553)
+texture = ExtResource("2_kd6bh")
 
 [node name="Control" type="Control" parent="." unique_id=435403303]
 layout_mode = 3
@@ -32,29 +38,32 @@ horizontal_alignment = 1
 
 [node name="naam1" type="Label" parent="Control" unique_id=282426689]
 layout_mode = 0
-offset_left = 536.0
-offset_top = 108.0
-offset_right = 632.0
-offset_bottom = 145.0
+offset_left = 489.0
+offset_top = 125.0
+offset_right = 585.0
+offset_bottom = 162.0
 theme_override_font_sizes/font_size = 27
 text = "name 1"
+horizontal_alignment = 1
 
 [node name="naam2" type="Label" parent="Control" unique_id=281781500]
 layout_mode = 0
-offset_left = 542.0
-offset_top = 160.0
-offset_right = 638.0
-offset_bottom = 197.0
+offset_left = 492.0
+offset_top = 212.0
+offset_right = 588.0
+offset_bottom = 249.0
 theme_override_font_sizes/font_size = 27
 text = "naam 2"
+horizontal_alignment = 1
 
 [node name="naam3" type="Label" parent="Control" unique_id=34416167]
 layout_mode = 0
-offset_left = 541.0
-offset_top = 209.0
-offset_right = 637.0
-offset_bottom = 246.0
+offset_left = 494.0
+offset_top = 312.0
+offset_right = 590.0
+offset_bottom = 349.0
 theme_override_font_sizes/font_size = 27
 text = "naam 3"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/back_to_main_menu" to="." method="_on_back_to_main_menu_pressed"]
