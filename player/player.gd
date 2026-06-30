@@ -45,6 +45,9 @@ func lose_coin(amount: int) -> void:
 	Gamemanger.coin_counter = max(0, Gamemanger.coin_counter - amount)
 	update_coin_label()
 
+func lose_cookie(amount: int) -> void:
+	Gamemanger.cookie_counter = max(0, Gamemanger.cookie_counter - amount)
+	update_cookie_label()
 
 func update_coin_label():
 	coin_label.text = "coin count: " + str(Gamemanger.coin_counter)

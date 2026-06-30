@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bgwfnvy1y02rv" path="res://npc/npcguide5(cookiefeit).tscn" id="16_16pnr"]
 [ext_resource type="PackedScene" uid="uid://cx1vuev2wpv75" path="res://npc/hond.tscn" id="18_mrfsb"]
 [ext_resource type="PackedScene" uid="uid://bjawlab5mr7ii" path="res://collectable's/cookie.tscn" id="19_xel1v"]
+[ext_resource type="PackedScene" uid="uid://df83pnlowiger" path="res://npc/npcguide6.tscn" id="20_u7s8g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8vhr"]
 texture = ExtResource("1_i2041")
@@ -88,7 +89,7 @@ tile_map_data = PackedByteArray("AAAbAlwAAAAAAAEAAAAbAl0AAAAAAAEAAAAbAl4AAAAAAAE
 tile_set = SubResource("TileSet_beq0j")
 
 [node name="player" parent="." unique_id=52804076 instance=ExtResource("6_hx44q")]
-position = Vector2(14944, 1066)
+position = Vector2(14650, 1071)
 
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_jwv3a")]
 layer = 5
@@ -545,7 +546,7 @@ position = Vector2(13018, 1249)
 position = Vector2(12682, 1041)
 
 [node name="npc6" parent="." unique_id=1541052393 instance=ExtResource("18_mrfsb")]
-position = Vector2(14901, 867)
+position = Vector2(12721, 860)
 
 [node name="cookie" parent="." unique_id=1186630057 instance=ExtResource("19_xel1v")]
 position = Vector2(14349, 1549)
@@ -569,7 +570,7 @@ position = Vector2(7336, 2779)
 position = Vector2(14280, 1611)
 
 [node name="cookie7" parent="." unique_id=2082122418 instance=ExtResource("19_xel1v")]
-position = Vector2(14800, 1409)
+position = Vector2(14895, 1573)
 
 [node name="cookie8" parent="." unique_id=1435909231 instance=ExtResource("19_xel1v")]
 position = Vector2(14337, 1642)
@@ -584,7 +585,7 @@ position = Vector2(14416, 1551)
 position = Vector2(14350, 1587)
 
 [node name="cookie12" parent="." unique_id=2030542186 instance=ExtResource("19_xel1v")]
-position = Vector2(14940, 1118)
+position = Vector2(14401, 1598)
 
 [node name="cookie13" parent="." unique_id=1809772977 instance=ExtResource("19_xel1v")]
 position = Vector2(14981, 1578)
@@ -621,6 +622,9 @@ position = Vector2(11778, 1237)
 
 [node name="coin138" parent="." unique_id=2144495597 instance=ExtResource("9_5j5gb")]
 position = Vector2(12189, 1231)
+
+[node name="npc8" parent="." unique_id=276206092 instance=ExtResource("20_u7s8g")]
+position = Vector2(14163, 1015)
 
 [connection signal="area_entered" from="level_exit" to="level_exit" method="_on_area_entered"]
 [connection signal="body_entered" from="level_exit" to="player" method="_on_area_2d_body_entered"]

@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bhi1jr8pyb7dr" path="res://npc/hond.gd" id="1_1fpuc"]
 [ext_resource type="Texture2D" uid="uid://1muwovrnkb15" path="res://texturs/hond.png" id="1_dp3s4"]
+[ext_resource type="PackedScene" uid="uid://d0hobx5g1krx3" path="res://dialogue/dialoguehond.tscn" id="3_e3kuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpuc"]
 size = Vector2(31, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kh24r"]
 radius = 517.5761
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1fpuc"]
+radius = 69.72087
 
 [node name="npc" type="CharacterBody2D" unique_id=165503267]
 collision_mask = 5
@@ -23,13 +27,28 @@ shape = SubResource("RectangleShape2D_1fpuc")
 [node name="cookie_detection_area" type="Area2D" parent="." unique_id=1060589871]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cookie_detection_area" unique_id=354010364]
+visible = false
 shape = SubResource("CircleShape2D_kh24r")
 
 [node name="Timer" type="Timer" parent="." unique_id=1359754210]
 autostart = true
+
+[node name="geef_cookie" type="Area2D" parent="." unique_id=1487337734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="geef_cookie" unique_id=1163073496]
+shape = SubResource("CircleShape2D_1fpuc")
+
+[node name="dialogue" parent="." unique_id=1628206401 instance=ExtResource("3_e3kuk")]
+offset_left = -161.0
+offset_top = -107.0
+offset_right = 16.0
+offset_bottom = 18.0
 
 [connection signal="body_entered" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_entered" from="cookie_detection_area" to="." method="_on_cookie_detection_area_body_entered"]
 [connection signal="body_exited" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="body_exited" from="cookie_detection_area" to="." method="_on_cookie_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="geef_cookie" to="." method="_on_geef_cookie_area_entered"]
+[connection signal="body_entered" from="geef_cookie" to="." method="_on_geef_cookie_body_entered"]
+[connection signal="body_exited" from="geef_cookie" to="." method="_on_geef_cookie_body_exited"]
