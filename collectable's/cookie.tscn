@@ -8,6 +8,8 @@ radius = 6.981923
 height = 33.995052
 
 [node name="cookie" type="Area2D" unique_id=1186630057 groups=["cookie"]]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_e7v1f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=796463478]

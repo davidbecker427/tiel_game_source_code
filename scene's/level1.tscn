@@ -88,7 +88,7 @@ tile_map_data = PackedByteArray("AAAbAlwAAAAAAAEAAAAbAl0AAAAAAAEAAAAbAl4AAAAAAAE
 tile_set = SubResource("TileSet_beq0j")
 
 [node name="player" parent="." unique_id=52804076 instance=ExtResource("6_hx44q")]
-position = Vector2(14616, 1084)
+position = Vector2(14944, 1066)
 
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_jwv3a")]
 layer = 5
@@ -461,7 +461,7 @@ position = Vector2(14661, 1034)
 shape = SubResource("CircleShape2D_5cjsp")
 
 [node name="npc" parent="level_exit" unique_id=1933416366 instance=ExtResource("15_cokpd")]
-position = Vector2(14315, 1459)
+position = Vector2(14658, 1557)
 
 [node name="coin105" parent="." unique_id=990807873 instance=ExtResource("9_5j5gb")]
 position = Vector2(14432, 1075)
@@ -512,10 +512,10 @@ position = Vector2(13566, 1660)
 position = Vector2(14790, 1239)
 
 [node name="coin119" parent="." unique_id=818432035 instance=ExtResource("9_5j5gb")]
-position = Vector2(14688, 1548)
+position = Vector2(14064, 1661)
 
 [node name="coin120" parent="." unique_id=931872248 instance=ExtResource("9_5j5gb")]
-position = Vector2(14927, 886)
+position = Vector2(13763, 931)
 
 [node name="coin121" parent="." unique_id=643699851 instance=ExtResource("9_5j5gb")]
 position = Vector2(14941, 815)
@@ -542,13 +542,85 @@ position = Vector2(12596, 1232)
 position = Vector2(13018, 1249)
 
 [node name="npc5" parent="." unique_id=1233527181 instance=ExtResource("16_16pnr")]
-position = Vector2(12674, 1021)
+position = Vector2(12682, 1041)
 
 [node name="npc6" parent="." unique_id=1541052393 instance=ExtResource("18_mrfsb")]
-position = Vector2(12722, 879)
+position = Vector2(14901, 867)
 
 [node name="cookie" parent="." unique_id=1186630057 instance=ExtResource("19_xel1v")]
-position = Vector2(14745, 1078)
+position = Vector2(14349, 1549)
+
+[node name="npc7" parent="." unique_id=979961944 instance=ExtResource("18_mrfsb")]
+position = Vector2(10172, 1532)
+
+[node name="cookie2" parent="." unique_id=172834198 instance=ExtResource("19_xel1v")]
+position = Vector2(6517, 1779)
+
+[node name="cookie3" parent="." unique_id=820147790 instance=ExtResource("19_xel1v")]
+position = Vector2(8832, 1523)
+
+[node name="cookie4" parent="." unique_id=325332846 instance=ExtResource("19_xel1v")]
+position = Vector2(9191, 1049)
+
+[node name="cookie5" parent="." unique_id=1974764720 instance=ExtResource("19_xel1v")]
+position = Vector2(7336, 2779)
+
+[node name="cookie6" parent="." unique_id=33858037 instance=ExtResource("19_xel1v")]
+position = Vector2(14280, 1611)
+
+[node name="cookie7" parent="." unique_id=2082122418 instance=ExtResource("19_xel1v")]
+position = Vector2(14800, 1409)
+
+[node name="cookie8" parent="." unique_id=1435909231 instance=ExtResource("19_xel1v")]
+position = Vector2(14337, 1642)
+
+[node name="cookie9" parent="." unique_id=1591428200 instance=ExtResource("19_xel1v")]
+position = Vector2(14288, 1549)
+
+[node name="cookie10" parent="." unique_id=386853427 instance=ExtResource("19_xel1v")]
+position = Vector2(14416, 1551)
+
+[node name="cookie11" parent="." unique_id=1940654284 instance=ExtResource("19_xel1v")]
+position = Vector2(14350, 1587)
+
+[node name="cookie12" parent="." unique_id=2030542186 instance=ExtResource("19_xel1v")]
+position = Vector2(14940, 1118)
+
+[node name="cookie13" parent="." unique_id=1809772977 instance=ExtResource("19_xel1v")]
+position = Vector2(14981, 1578)
+
+[node name="cookie14" parent="." unique_id=567514266 instance=ExtResource("19_xel1v")]
+position = Vector2(15025, 1573)
+
+[node name="coin129" parent="." unique_id=1163159320 instance=ExtResource("9_5j5gb")]
+position = Vector2(14708, 856)
+
+[node name="coin130" parent="." unique_id=1435720972 instance=ExtResource("9_5j5gb")]
+position = Vector2(13406, 858)
+
+[node name="coin131" parent="." unique_id=36046032 instance=ExtResource("9_5j5gb")]
+position = Vector2(13906, 869)
+
+[node name="coin132" parent="." unique_id=1862887690 instance=ExtResource("9_5j5gb")]
+position = Vector2(14997, 1114)
+
+[node name="coin133" parent="." unique_id=1993435952 instance=ExtResource("9_5j5gb")]
+position = Vector2(13048, 837)
+
+[node name="coin134" parent="." unique_id=1808258765 instance=ExtResource("9_5j5gb")]
+position = Vector2(14368, 1452)
+
+[node name="coin135" parent="." unique_id=1331279379 instance=ExtResource("9_5j5gb")]
+position = Vector2(13212, 861)
+
+[node name="coin136" parent="." unique_id=841859327 instance=ExtResource("9_5j5gb")]
+position = Vector2(12647, 1497)
+
+[node name="coin137" parent="." unique_id=1167126943 instance=ExtResource("9_5j5gb")]
+position = Vector2(11778, 1237)
+
+[node name="coin138" parent="." unique_id=2144495597 instance=ExtResource("9_5j5gb")]
+position = Vector2(12189, 1231)
 
 [connection signal="area_entered" from="level_exit" to="level_exit" method="_on_area_entered"]
 [connection signal="body_entered" from="level_exit" to="player" method="_on_area_2d_body_entered"]
