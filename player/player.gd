@@ -3,10 +3,11 @@ extends CharacterBody2D
 @export var speed = 200
 @onready var coin_label = %Label
 @onready var cookie_label = %cookiecounter
-
+@onready var playercshape = get_node("Area2D/CollisionShape2D")
 
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
+
 
 func _ready():
 	add_to_group("player")
@@ -54,3 +55,4 @@ func update_coin_label():
 
 func update_cookie_label():
 	cookie_label.text = "cookie count: " + str(Gamemanger.cookie_counter)
+	
