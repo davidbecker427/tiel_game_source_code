@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ecvxwod04ity"]
+
+[ext_resource type="Script" uid="uid://dcoumgm8me7fp" path="res://dialogue/dialogue_6(cookiefeit).gd" id="1_o74ux"]
+[ext_resource type="Texture2D" uid="uid://bcdq3kkvo5xen" path="res://texturs/textbox.png" id="2_oh36u"]
+
+[node name="dialogue" type="Control" unique_id=1628206401]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -15.0
+offset_top = -56.0
+offset_right = 161.0
+offset_bottom = 72.0
+script = ExtResource("1_o74ux")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=162279229]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 184.0
+offset_bottom = 100.0
+texture = ExtResource("2_oh36u")
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=1516112072]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 189.71428
+offset_bottom = 31.0
+scale = Vector2(0.7, 0.7)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Name:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect" unique_id=1152319640]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 21.0
+offset_right = 267.0
+offset_bottom = 93.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "chatting....."
