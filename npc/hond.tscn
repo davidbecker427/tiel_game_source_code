@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cx1vuev2wpv75"]
 
+[ext_resource type="Script" uid="uid://bhi1jr8pyb7dr" path="res://npc/hond.gd" id="1_1fpuc"]
 [ext_resource type="Texture2D" uid="uid://1muwovrnkb15" path="res://texturs/hond.png" id="1_dp3s4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpuc"]
@@ -10,6 +11,7 @@ radius = 38.118237
 
 [node name="npc" type="CharacterBody2D" unique_id=165503267]
 collision_mask = 5
+script = ExtResource("1_1fpuc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1524832225]
 texture = ExtResource("1_dp3s4")

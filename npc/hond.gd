@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 30
+const speed = 100
 
 var current_state = IDLE
 var dir = Vector2.RIGHT

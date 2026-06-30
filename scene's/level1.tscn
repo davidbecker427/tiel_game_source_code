@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bpkvrvei34uv6" path="res://npc/npcguide4(hondfeit).tscn" id="15_cokpd"]
 [ext_resource type="PackedScene" uid="uid://bgwfnvy1y02rv" path="res://npc/npcguide5(cookiefeit).tscn" id="16_16pnr"]
 [ext_resource type="PackedScene" uid="uid://cx1vuev2wpv75" path="res://npc/hond.tscn" id="18_mrfsb"]
+[ext_resource type="PackedScene" uid="uid://bjawlab5mr7ii" path="res://collectable's/cookie.tscn" id="19_xel1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8vhr"]
 texture = ExtResource("1_i2041")
@@ -87,7 +88,7 @@ tile_map_data = PackedByteArray("AAAbAlwAAAAAAAEAAAAbAl0AAAAAAAEAAAAbAl4AAAAAAAE
 tile_set = SubResource("TileSet_beq0j")
 
 [node name="player" parent="." unique_id=52804076 instance=ExtResource("6_hx44q")]
-position = Vector2(14819, 1062)
+position = Vector2(14616, 1084)
 
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_jwv3a")]
 layer = 5
@@ -456,7 +457,7 @@ position = Vector2(9216, 954)
 script = ExtResource("14_gb4c8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level_exit" unique_id=167677420]
-position = Vector2(14659, 1029)
+position = Vector2(14661, 1034)
 shape = SubResource("CircleShape2D_5cjsp")
 
 [node name="npc" parent="level_exit" unique_id=1933416366 instance=ExtResource("15_cokpd")]
@@ -545,6 +546,9 @@ position = Vector2(12674, 1021)
 
 [node name="npc6" parent="." unique_id=1541052393 instance=ExtResource("18_mrfsb")]
 position = Vector2(12722, 879)
+
+[node name="cookie" parent="." unique_id=1186630057 instance=ExtResource("19_xel1v")]
+position = Vector2(14745, 1078)
 
 [connection signal="area_entered" from="level_exit" to="level_exit" method="_on_area_entered"]
 [connection signal="body_entered" from="level_exit" to="player" method="_on_area_2d_body_entered"]

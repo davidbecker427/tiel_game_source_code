@@ -55,6 +55,14 @@ offset_right = -446.0
 offset_bottom = -279.0
 text = "coin count 0"
 
+[node name="cookiecounter" type="Label" parent="Camera2D" unique_id=1482253694]
+unique_name_in_owner = true
+offset_left = -539.0
+offset_top = -274.0
+offset_right = -444.0
+offset_bottom = -251.0
+text = "cookie count 0"
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="area_detection" to="." method="_on_area_detection_body_entered"]
 [connection signal="body_exited" from="area_detection" to="." method="_on_area_detection_body_exited"]

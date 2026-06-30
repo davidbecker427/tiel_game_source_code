@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bjawlab5mr7ii"]
+
+[ext_resource type="Texture2D" uid="uid://q1llurjgwsbq" path="res://texturs/hondencookie.png" id="1_bucus"]
+[ext_resource type="Script" uid="uid://bxy5njpetwdvm" path="res://collectable's/cookie.gd" id="1_e7v1f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7v1f"]
+radius = 6.981923
+height = 33.995052
+
+[node name="cookie" type="Area2D" unique_id=1186630057 groups=["cookie"]]
+script = ExtResource("1_e7v1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=796463478]
+position = Vector2(1, -6)
+texture = ExtResource("1_bucus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342445556]
+position = Vector2(2, 2)
+rotation = 1.5878555
+shape = SubResource("CapsuleShape2D_e7v1f")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="tree_entered" from="CollisionShape2D" to="." method="_on_collision_shape_2d_tree_entered"]
