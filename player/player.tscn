@@ -76,6 +76,14 @@ offset_right = -444.0
 offset_bottom = -251.0
 text = "cookie count 0"
 
+[node name="keycount" type="Label" parent="Camera2D" unique_id=929478706]
+unique_name_in_owner = true
+offset_left = -539.0
+offset_top = -242.0
+offset_right = -450.0
+offset_bottom = -219.0
+text = "key count 0"
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="area_detection" to="." method="_on_area_detection_body_entered"]
 [connection signal="body_exited" from="area_detection" to="." method="_on_area_detection_body_exited"]

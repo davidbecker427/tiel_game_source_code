@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bhy2dqpwk2d8k"]
+
+[ext_resource type="Script" uid="uid://cw2ff61s0fmko" path="res://npc/npcstatue.gd" id="1_5hb10"]
+[ext_resource type="Texture2D" uid="uid://dem3aj30nyqb1" path="res://texturs/rocrivorlogo.png" id="2_5hb10"]
+[ext_resource type="PackedScene" uid="uid://d1lsupcmhfd04" path="res://dialogue/dialoguerocrivor.tscn" id="3_hxbui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukdxx"]
+size = Vector2(100, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh24r"]
+radius = 74.24958
+
+[node name="npc" type="CharacterBody2D" unique_id=165503267]
+collision_layer = 17
+collision_mask = 21
+script = ExtResource("1_5hb10")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=398661215]
+texture = ExtResource("2_5hb10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929638076]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ukdxx")
+
+[node name="chat_detection_area" type="Area2D" parent="." unique_id=1060589871]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area" unique_id=354010364]
+position = Vector2(-4, -1)
+shape = SubResource("CircleShape2D_kh24r")
+
+[node name="Timer" type="Timer" parent="." unique_id=1359754210]
+autostart = true
+
+[node name="dialogue" parent="." unique_id=1628206401 instance=ExtResource("3_hxbui")]
+offset_left = -135.0
+offset_top = -116.0
+offset_right = 41.0
+offset_bottom = 12.0
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

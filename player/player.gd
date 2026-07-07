@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var coin_label = %Label
 @onready var cookie_label = %cookiecounter
 @onready var water_timer_label = %waterlooptijd
+@onready var key_count_label = %keycount
+
 
 var kan_over_water_lopen = false
 var waterloop_tijd_over = 0.0
