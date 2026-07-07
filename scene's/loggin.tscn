@@ -53,14 +53,6 @@ offset_bottom = 360.0
 theme_override_font_sizes/font_size = 30
 text = "wachtwoord"
 
-[node name="wachtwoord_inputfield" type="TextEdit" parent="Control" unique_id=1663054063]
-layout_mode = 0
-offset_left = 373.0
-offset_top = 384.0
-offset_right = 840.0
-offset_bottom = 444.0
-placeholder_text = "wachtwoord here"
-
 [node name="naar_registraatie" type="Button" parent="Control" unique_id=1902667244]
 layout_mode = 0
 offset_left = -2.0
@@ -76,6 +68,15 @@ offset_top = 447.0
 offset_right = 441.0
 offset_bottom = 478.0
 text = "inlogen"
+
+[node name="wachtwoord_LineEdit" type="LineEdit" parent="Control" unique_id=2133107786]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 365.0
+offset_right = 829.0
+offset_bottom = 416.0
+placeholder_text = "wachtwoord hier"
+secret = true
 
 [connection signal="pressed" from="Control/naar_registraatie" to="Control" method="_on_naar_registraatie_pressed"]
 [connection signal="pressed" from="Control/inlogen" to="Control" method="_on_inlogen_pressed"]

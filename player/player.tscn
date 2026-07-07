@@ -14,24 +14,28 @@ height = 36.0
 height = 36.0
 
 [node name="player" type="CharacterBody2D" unique_id=52804076 groups=["player"]]
-collision_layer = 15
-collision_mask = 15
+collision_layer = 31
+collision_mask = 31
 script = ExtResource("1_fui21")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814459758]
 texture = ExtResource("2_ylu1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809176625]
+light_mask = 17
+visibility_layer = 17
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1882933014]
 light_mask = 3
 visibility_layer = 3
-collision_layer = 9
-collision_mask = 9
+collision_layer = 24
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=604545126]
+light_mask = 17
+visibility_layer = 17
 shape = SubResource("CapsuleShape2D_fui21")
 
 [node name="area_detection" type="Area2D" parent="." unique_id=439646931]
@@ -48,6 +52,13 @@ position = Vector2(-516, -282)
 position = Vector2(57, 37)
 process_callback = 0
 position_smoothing_enabled = true
+
+[node name="waterlooptijd" type="Label" parent="Camera2D" unique_id=675234201]
+unique_name_in_owner = true
+offset_left = 89.0
+offset_top = -304.0
+offset_right = 510.0
+offset_bottom = -281.0
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=527500419]
 unique_name_in_owner = true

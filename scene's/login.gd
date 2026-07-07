@@ -13,7 +13,7 @@ func _on_naar_registraatie_pressed() -> void:
 
 func _on_inlogen_pressed() -> void:
 	var username = $username_inputfield.text
-	var password = $wachtwoord_inputfield.text
+	var password = $wachtwoord_LineEdit.text
 	
 	var password_hash = password.sha256_text()
 	database.query_with_bindings(

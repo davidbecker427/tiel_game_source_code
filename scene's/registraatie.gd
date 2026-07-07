@@ -36,7 +36,7 @@ func create_user(username: String, password: String):
 func _on_create_acount_pressed() -> void:
 	create_user(
 		$username_regestraatie.text,
-		$wachtwoord_regestraatie.text
+		$wachtwoord_LineEdit.text
 	)
 
 func _on_terug_naar_login_pressed() -> void:

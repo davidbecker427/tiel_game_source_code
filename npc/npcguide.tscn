@@ -110,7 +110,8 @@ height = 28.0
 radius = 38.118237
 
 [node name="npc" type="CharacterBody2D" unique_id=165503267]
-collision_mask = 5
+collision_layer = 17
+collision_mask = 21
 script = ExtResource("1_xxcha")
 
 [node name="dialogue" parent="." unique_id=1628206401 instance=ExtResource("2_3i1kj")]

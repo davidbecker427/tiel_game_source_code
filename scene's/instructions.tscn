@@ -36,7 +36,8 @@ die je krijgt aan het einde van het level. deze quizes geven je punten. als je e
 die rond lopen door de map die geven je hint waar je de monumenten kan vinden. je kan ook munten door de map vinden die je ook 
 punten geven . maar kijk uit deze punten kunnen gestolen worden door de boeven rond de map lopen dus die moet je vermijden.
 als je all standbeelden hebt gevonden moet je weer terug naar de start toe gaan en door de deur een gaan.
-dan kom je uit bij de quiz vragen / je eindicht dan het level"
+dan kom je uit bij de quiz vragen / je eindicht dan het level
+je ook honden koekjes geven om over water heen telopen maar als de tijd om is en je vast zit in het water dan moet je opnieuwe proberen"
 
 [node name="Label3" type="Label" parent="." unique_id=1010188859]
 offset_left = 193.0
@@ -53,7 +54,7 @@ offset_top = 374.0
 offset_right = 1045.0
 offset_bottom = 482.0
 text = "WASD + peltjes toetsen = lopen
-C = praten met npc / monument bekijken
+C = praten met npc en honden / monument bekijken
 spatiebalk = volgende text in gesprek
 E = om deuren te openen"
 

@@ -14,13 +14,16 @@ radius = 517.5761
 radius = 69.72087
 
 [node name="npc" type="CharacterBody2D" unique_id=165503267]
-collision_mask = 5
+collision_layer = 17
+collision_mask = 21
 script = ExtResource("1_1fpuc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1524832225]
 texture = ExtResource("1_dp3s4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929638076]
+light_mask = 17
+visibility_layer = 17
 position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_1fpuc")
 
@@ -44,10 +47,10 @@ offset_top = -107.0
 offset_right = 16.0
 offset_bottom = 18.0
 
-[connection signal="body_entered" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_entered" from="cookie_detection_area" to="." method="_on_cookie_detection_area_body_entered"]
-[connection signal="body_exited" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="body_entered" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="cookie_detection_area" to="." method="_on_cookie_detection_area_body_exited"]
+[connection signal="body_exited" from="cookie_detection_area" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="geef_cookie" to="." method="_on_geef_cookie_area_entered"]
 [connection signal="body_entered" from="geef_cookie" to="." method="_on_geef_cookie_body_entered"]

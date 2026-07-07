@@ -11,7 +11,8 @@ size = Vector2(62, 67)
 radius = 74.24958
 
 [node name="npc" type="CharacterBody2D" unique_id=165503267]
-collision_mask = 5
+collision_layer = 17
+collision_mask = 21
 script = ExtResource("1_uvpsc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=398661215]
