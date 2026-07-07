@@ -39,18 +39,18 @@ horizontal_alignment = 1
 
 [node name="start" type="Button" parent="Control" unique_id=546736831]
 layout_mode = 0
-offset_left = 473.0
-offset_top = 247.0
-offset_right = 699.0
-offset_bottom = 293.0
+offset_left = 467.0
+offset_top = 342.0
+offset_right = 693.0
+offset_bottom = 388.0
 text = "start"
 
 [node name="options" type="Button" parent="Control" unique_id=485176801]
 layout_mode = 0
-offset_left = 474.0
-offset_top = 603.0
-offset_right = 703.0
-offset_bottom = 648.0
+offset_left = -286.0
+offset_top = 368.0
+offset_right = -57.0
+offset_bottom = 413.0
 text = "options"
 
 [node name="quit" type="Button" parent="Control" unique_id=1983969511]
@@ -63,10 +63,10 @@ text = "quit"
 
 [node name="leaderboard" type="Button" parent="Control" unique_id=680259677]
 layout_mode = 0
-offset_left = 478.0
-offset_top = 412.0
-offset_right = 704.0
-offset_bottom = 478.0
+offset_left = 466.0
+offset_top = 583.0
+offset_right = 692.0
+offset_bottom = 649.0
 text = "leaderboard"
 
 [node name="create table" type="Button" parent="Control" unique_id=66249524]

@@ -45,7 +45,7 @@ tile_map_data = PackedByteArray("AAA+A24AAAAAAAAAAAA9A24AAAAAAAAAAAA8A24AAAAAAAA
 tile_set = SubResource("TileSet_l6osf")
 
 [node name="player" parent="." unique_id=52804076 instance=ExtResource("6_hx44q")]
-position = Vector2(3793, -168)
+position = Vector2(14669, 1086)
 
 [node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("1_jwv3a")]
 layer = 5
@@ -414,7 +414,7 @@ position = Vector2(9216, 954)
 script = ExtResource("14_gb4c8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level_exit" unique_id=167677420]
-position = Vector2(14659, 1037)
+position = Vector2(14661, 1029)
 shape = SubResource("CircleShape2D_5cjsp")
 
 [node name="npc" parent="level_exit" unique_id=1933416366 instance=ExtResource("15_cokpd")]

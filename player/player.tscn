@@ -55,33 +55,33 @@ position_smoothing_enabled = true
 
 [node name="waterlooptijd" type="Label" parent="Camera2D" unique_id=675234201]
 unique_name_in_owner = true
-offset_left = 89.0
-offset_top = -304.0
-offset_right = 510.0
-offset_bottom = -281.0
+offset_left = 105.0
+offset_top = -278.0
+offset_right = 526.0
+offset_bottom = -255.0
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=527500419]
 unique_name_in_owner = true
-offset_left = -541.0
-offset_top = -302.0
-offset_right = -446.0
-offset_bottom = -279.0
+offset_left = -519.0
+offset_top = -284.0
+offset_right = -424.0
+offset_bottom = -261.0
 text = "coin count 0"
 
 [node name="cookiecounter" type="Label" parent="Camera2D" unique_id=1482253694]
 unique_name_in_owner = true
-offset_left = -539.0
-offset_top = -274.0
-offset_right = -444.0
-offset_bottom = -251.0
+offset_left = -517.0
+offset_top = -256.0
+offset_right = -404.0
+offset_bottom = -233.0
 text = "cookie count 0"
 
 [node name="keycount" type="Label" parent="Camera2D" unique_id=929478706]
 unique_name_in_owner = true
-offset_left = -539.0
-offset_top = -242.0
-offset_right = -450.0
-offset_bottom = -219.0
+offset_left = -517.0
+offset_top = -224.0
+offset_right = -428.0
+offset_bottom = -201.0
 text = "key count 0"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

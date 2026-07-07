@@ -31,38 +31,40 @@ offset_left = 70.0
 offset_top = 144.0
 offset_right = 1095.0
 offset_bottom = 265.0
-text = "in deze game moet je zo veel mogelijke punten verzamelen dit doe je door monument te viden die je info geven over quiz vragen
+text = "in deze game moet je zo veel mogelijke punten verzamelen dit doe je door monument te vinden die je info geven over quiz vragen
 die je krijgt aan het einde van het level. deze quizes geven je punten. als je een monument niet kan vinden praat dan met de mensen
 die rond lopen door de map die geven je hint waar je de monumenten kan vinden. je kan ook munten door de map vinden die je ook 
 punten geven . maar kijk uit deze punten kunnen gestolen worden door de boeven rond de map lopen dus die moet je vermijden.
 als je all standbeelden hebt gevonden moet je weer terug naar de start toe gaan en door de deur een gaan.
 dan kom je uit bij de quiz vragen / je eindicht dan het level
-je ook honden koekjes geven om over water heen telopen maar als de tijd om is en je vast zit in het water dan moet je opnieuwe proberen"
+je ook honden koekjes geven om over water heen telopen maar als de tijd om is en je vast zit in het water dan moet je opnieuwe proberen
+je kan ook keys vinden. als je die gebruikt dan  ga je meteen naar het volgende level"
 
 [node name="Label3" type="Label" parent="." unique_id=1010188859]
-offset_left = 193.0
-offset_top = 308.0
-offset_right = 914.0
-offset_bottom = 367.0
+offset_left = 142.0
+offset_top = 370.0
+offset_right = 863.0
+offset_bottom = 429.0
 text = "controls"
 label_settings = SubResource("LabelSettings_h8hbf")
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=713269709]
-offset_left = 136.0
-offset_top = 374.0
-offset_right = 1045.0
-offset_bottom = 482.0
+offset_left = 125.0
+offset_top = 436.0
+offset_right = 1034.0
+offset_bottom = 563.0
 text = "WASD + peltjes toetsen = lopen
 C = praten met npc en honden / monument bekijken
 spatiebalk = volgende text in gesprek
-E = om deuren te openen"
+E = om deuren te openen
+K= key gebruiken"
 
 [node name="Button" type="Button" parent="." unique_id=1962523580]
-offset_left = 367.0
-offset_top = 523.0
-offset_right = 701.0
-offset_bottom = 583.0
+offset_left = 360.0
+offset_top = 591.0
+offset_right = 694.0
+offset_bottom = 651.0
 theme_override_font_sizes/font_size = 27
 text = "start"
 

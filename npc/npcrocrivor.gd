@@ -23,6 +23,5 @@ func _on_chat_detection_area_body_exited(body: Node2D) -> void:
 		player_in_chat_zone = false
 
 func _on_dialogue_dialogue_finshed() -> void:
-	print(Gamemanger.key_counterc)
 	is_chatting = false
 	pass # Replace with function body.
