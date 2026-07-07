@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dw745a7yxvod2"]
+
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_usk88"]
+[ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="2_b2mfn"]
+[ext_resource type="Script" uid="uid://s2wknkdtcje3" path="res://scene's/foutantwoord.gd" id="3_5nfgg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st4wl"]
+bg_color = Color(0.85490197, 0.0627451, 0.18431373, 1)
+
+[node name="Node2D" type="Node2D" unique_id=25554990]
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=966367517]
+light_mask = 0
+position = Vector2(2314, -319.062)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_usk88")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=777649720]
+position = Vector2(2317, -315)
+
+[node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("2_b2mfn")]
+
+[node name="Control" type="Control" parent="." unique_id=1542762278]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12.0
+offset_top = -11.124084
+offset_right = 52.0
+offset_bottom = 28.875916
+script = ExtResource("3_5nfgg")
+
+[node name="goed_gedaan_hulp" type="Label" parent="Control" unique_id=316964853]
+layout_mode = 0
+offset_left = 1846.0
+offset_top = -484.0
+offset_right = 2761.0
+offset_bottom = -355.0
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_st4wl")
+text = "jammer dat was niet het goede antwoord 
+probeer het opniewe door naar het hooft menu tegaan
+tip: probeer het geheimen eiland te vinden"
+horizontal_alignment = 1
+
+[node name="goed_antwoord" type="Label" parent="Control" unique_id=1771533394]
+layout_mode = 0
+offset_left = 2152.0
+offset_top = -532.0
+offset_right = 2577.0
+offset_bottom = -496.0
+theme_override_font_sizes/font_size = 26
+text = "dat was niet het goede antwoordt"
+
+[node name="label" type="Label" parent="Control" unique_id=1748912837]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1729.0
+offset_top = -632.0
+offset_right = 1824.0
+offset_bottom = -609.0
+text = "coin count 0"
+
+[node name="leaderboard" type="Button" parent="Control" unique_id=1668304221]
+layout_mode = 0
+offset_left = 2591.0
+offset_top = -331.0
+offset_right = 2725.0
+offset_bottom = -300.0
+text = "naar leadrboard"
+
+[node name="main_menu" type="Button" parent="Control" unique_id=286465068]
+layout_mode = 0
+offset_left = 1868.0
+offset_top = -341.0
+offset_right = 2050.0
+offset_bottom = -310.0
+text = "terug naar main menu"
+
+[connection signal="pressed" from="Control/leaderboard" to="Control" method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Control/main_menu" to="Control" method="_on_main_menu_pressed"]

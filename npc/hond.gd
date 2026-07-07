@@ -40,7 +40,7 @@ func _process(delta):
 			player.lose_cookie(1)
 			is_roaming = false
 			is_chatting = true
-			player.geef_over_water_lopen(30.0)
+			player.geef_over_water_lopen(60.0)
 			if Gamemanger.cookie_counter <= 1:
 				player = null
 				player_chase = false

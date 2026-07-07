@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://ceucq55fr4a31"]
+
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_5ft5y"]
+[ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="2_78dx1"]
+[ext_resource type="Script" uid="uid://bhli1oiq4uf5k" path="res://scene's/goedantwoordtussendoor.gd" id="3_5ft5y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st4wl"]
+bg_color = Color(0.4629951, 0.64247894, 0.11379231, 1)
+
+[node name="Node2D" type="Node2D" unique_id=25554990]
+position = Vector2(1399, -448)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=247054306]
+position = Vector2(550, 332)
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=966367517]
+light_mask = 0
+position = Vector2(550, 334)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_5ft5y")
+
+[node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("2_78dx1")]
+
+[node name="Control" type="Control" parent="." unique_id=1542762278]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_5ft5y")
+metadata/_edit_use_anchors_ = true
+
+[node name="goed_gedaan_hulp" type="Label" parent="Control" unique_id=316964853]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 148.0
+offset_right = 1035.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_st4wl")
+text = "goed gedaan!!!!
+je hebt 10 extra punten gekregen
+laten we door gaan naar de volgende vraag"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="goed_antwoord" type="Label" parent="Control" unique_id=1771533394]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 100.0
+offset_right = 806.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 26
+text = "dat was het goede antwoord!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="label" type="Label" parent="Control" unique_id=1748912837]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.15
+anchor_top = 0.45
+anchor_right = -0.15
+anchor_bottom = 0.45
+offset_left = 3.0
+offset_right = 98.0
+offset_bottom = 23.0
+text = "coin count 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="volgende vraag" type="Button" parent="Control" unique_id=1668304221]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 301.0
+offset_right = 999.0
+offset_bottom = 332.0
+text = "naar volgende vraag"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/volgende vraag" to="Control" method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Control/volgende vraag" to="Control" method="_on_volgende_vraag_pressed"]

@@ -29,3 +29,5 @@ func _process(delta):
 			}
 			var success = database.insert_row("player_scoreB", data)
 			get_tree().change_scene_to_file("res://scene's/quizvraag1.tscn")
+			Gamemanger.cookie_counter = 0
+			Gamemanger.key_counter = 0

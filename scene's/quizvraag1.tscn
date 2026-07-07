@@ -10,8 +10,8 @@
 
 [node name="MapMenu" type="Sprite2D" parent="." unique_id=1443740783]
 light_mask = 0
-position = Vector2(1038, -1108)
-scale = Vector2(1.294382, 1.0779966)
+position = Vector2(1038, -1094)
+scale = Vector2(1.294382, 1.0682198)
 texture = ExtResource("1_m8muf")
 
 [node name="Camera2D" type="Camera2D" parent="MapMenu" unique_id=1220117135]
@@ -38,10 +38,10 @@ script = ExtResource("1_0glme")
 [node name="Label" type="Label" parent="Control" unique_id=1282414640]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 470.0
-offset_top = -1431.0
-offset_right = 565.0
-offset_bottom = -1408.0
+offset_left = 472.0
+offset_top = -1417.0
+offset_right = 567.0
+offset_bottom = -1394.0
 text = "coin count 0"
 
 [node name="goed_antwoord" type="Button" parent="Control" unique_id=1723337086]

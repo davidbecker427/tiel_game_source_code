@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cdwjtsn5dbwft"]
+
+[ext_resource type="Texture2D" uid="uid://dji7uocxopp7s" path="res://texturs/map_menu.png" id="1_mmcmm"]
+[ext_resource type="PackedScene" uid="uid://drisdlhhf1o2e" path="res://gamemanger/gamemanger.tscn" id="2_egfge"]
+[ext_resource type="Texture2D" uid="uid://c6c2vadve4cgy" path="res://texturs/quiz1.png" id="3_nqfl3"]
+[ext_resource type="PackedScene" uid="uid://4spjjhqqx53c" path="res://scene's/pause_menu.tscn" id="4_uuslu"]
+[ext_resource type="Script" uid="uid://b8xo6tstqlh3x" path="res://scene's/quizvraag2.gd" id="5_mmcmm"]
+
+[node name="Node2D" type="Node2D" unique_id=420110963]
+
+[node name="MapMenu" type="Sprite2D" parent="." unique_id=1443740783]
+light_mask = 0
+position = Vector2(1038, -1108)
+scale = Vector2(1.294382, 1.0779966)
+texture = ExtResource("1_mmcmm")
+
+[node name="Camera2D" type="Camera2D" parent="MapMenu" unique_id=1220117135]
+position = Vector2(0, 2.782959)
+scale = Vector2(0.7725695, 0.91326445)
+
+[node name="Node2D" parent="." unique_id=734122412 instance=ExtResource("2_egfge")]
+position = Vector2(95, -776)
+
+[node name="Quiz1" type="Sprite2D" parent="." unique_id=1266489933]
+position = Vector2(-645, 325.99994)
+scale = Vector2(2.302, 1.292)
+texture = ExtResource("3_nqfl3")
+
+[node name="PauseMenu" parent="." unique_id=855126317 instance=ExtResource("4_uuslu")]
+
+[node name="Control" type="Control" parent="." unique_id=227627640]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_mmcmm")
+
+[node name="Label" type="Label" parent="Control" unique_id=1282414640]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 470.0
+offset_top = -1431.0
+offset_right = 565.0
+offset_bottom = -1408.0
+text = "coin count 0"
+
+[node name="goed_antwoord" type="Button" parent="Control" unique_id=1723337086]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = -960.0
+offset_right = 1275.0
+offset_bottom = -906.0
+text = "in 1996"
+
+[node name="Label2" type="Label" parent="Control" unique_id=1473804276]
+layout_mode = 0
+offset_left = 583.0
+offset_top = -1331.0
+offset_right = 1347.0
+offset_bottom = -1292.0
+theme_override_font_sizes/font_size = 28
+text = "waneer kreeg roc rivor hun licentie om een school te zijn"
+
+[node name="fout_antwoord2" type="Button" parent="Control" unique_id=1141393382]
+layout_mode = 0
+offset_left = 631.0
+offset_top = -1129.0
+offset_right = 826.0
+offset_bottom = -1067.0
+text = "in 1994"
+
+[node name="fout_antwoord3" type="Button" parent="Control" unique_id=2102804945]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = -1148.0
+offset_right = 1282.0
+offset_bottom = -1071.0
+text = "in 2007"
+
+[node name="fout_antwoord1" type="Button" parent="Control" unique_id=680365512]
+layout_mode = 0
+offset_left = 618.0
+offset_top = -959.0
+offset_right = 813.0
+offset_bottom = -882.0
+text = "in 2005"
+
+[connection signal="pressed" from="Control/goed_antwoord" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/goed_antwoord" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord2" to="Control" method="_on_fout_antwoord_2_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord3" to="Control" method="_on_fout_antwoord_3_pressed"]
+[connection signal="pressed" from="Control/fout_antwoord1" to="Control" method="_on_fout_antwoord_1_pressed"]

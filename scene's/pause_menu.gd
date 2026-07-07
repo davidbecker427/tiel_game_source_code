@@ -28,6 +28,8 @@ func _on_back_to_main_menu_pressed() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scene's/main menu.tscn")
 	Gamemanger.coin_counter = 0
+	Gamemanger.cookie_counter = 0
+	Gamemanger.key_counter = 0
 	pass 
 
 
@@ -35,3 +37,5 @@ func _on_to_leaderboard_pressed() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scene's/leaderboard.tscn")
 	Gamemanger.coin_counter = 0
+	Gamemanger.cookie_counter = 0
+	Gamemanger.key_counter = 0

@@ -47,6 +47,8 @@ func _physics_process(delta):
 		}
 		var success = database.insert_row("player_scoreB", data)
 		get_tree().change_scene_to_file("res://scene's/quizvraag1.tscn")
+		Gamemanger.cookie_counter = 0
+		Gamemanger.key_counter = 0
 	move_and_slide()
 #als er een coin wordt gecollect dan gaat er +1 by de counter
 func _on_area_2d_area_entered(area: Area2D) -> void:
