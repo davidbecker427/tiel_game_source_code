@@ -586,7 +586,7 @@ position = Vector2(14163, 1015)
 position = Vector2(3849, 17)
 
 [node name="cookie15" parent="." unique_id=87019613 instance=ExtResource("19_xel1v")]
-position = Vector2(3658, 52)
+position = Vector2(6334, 1440)
 
 [node name="coin139" parent="." unique_id=1809061488 instance=ExtResource("9_5j5gb")]
 position = Vector2(3390, 43)
@@ -614,6 +614,15 @@ position = Vector2(3620, -197)
 
 [node name="npc11" parent="." unique_id=731287961 instance=ExtResource("18_xel1v")]
 position = Vector2(3466, 22)
+
+[node name="cookie16" parent="." unique_id=1472941427 instance=ExtResource("19_xel1v")]
+position = Vector2(7666, 1262)
+
+[node name="cookie17" parent="." unique_id=846797601 instance=ExtResource("19_xel1v")]
+position = Vector2(6713, 2208)
+
+[node name="cookie18" parent="." unique_id=1971324460 instance=ExtResource("19_xel1v")]
+position = Vector2(9236, 2130)
 
 [connection signal="area_entered" from="level_exit" to="level_exit" method="_on_area_entered"]
 [connection signal="body_entered" from="level_exit" to="player" method="_on_area_2d_body_entered"]
