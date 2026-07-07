@@ -7,6 +7,7 @@ var player_in_chat_zone = false
 func _process(delta):
 	if Input.is_action_just_pressed("chat") and player_in_chat_zone:
 		print("chatting with npc")
+		player.set_key(Gamemanger.key_counter + 1)
 		$dialogue.start()
 		is_chatting = true
 

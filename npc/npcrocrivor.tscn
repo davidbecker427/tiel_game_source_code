@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhy2dqpwk2d8k"]
 
-[ext_resource type="Script" uid="uid://cw2ff61s0fmko" path="res://npc/npcstatue.gd" id="1_5hb10"]
+[ext_resource type="Script" uid="uid://dj4cvsu5oymby" path="res://npc/npcrocrivor.gd" id="1_5hb10"]
 [ext_resource type="Texture2D" uid="uid://dem3aj30nyqb1" path="res://texturs/rocrivorlogo.png" id="2_5hb10"]
 [ext_resource type="PackedScene" uid="uid://d1lsupcmhfd04" path="res://dialogue/dialoguerocrivor.tscn" id="3_hxbui"]
 
