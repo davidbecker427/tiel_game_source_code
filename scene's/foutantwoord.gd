@@ -14,7 +14,10 @@ func update_coin_label():
 func _on_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene's/leaderboard.tscn")
 	Gamemanger.coin_counter = 0
-	
+	Gamemanger.cookie_counter = 0
+	Gamemanger.key_counter = 0
 func _on_main_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene's/main menu.tscn")
 	Gamemanger.coin_counter = 0
+	Gamemanger.cookie_counter = 0
+	Gamemanger.key_counter = 0

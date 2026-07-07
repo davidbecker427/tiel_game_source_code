@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bgwfnvy1y02rv" path="res://npc/npcguide5(cookiefeit).tscn" id="16_16pnr"]
 [ext_resource type="PackedScene" uid="uid://bhy2dqpwk2d8k" path="res://npc/npcrocrivor.tscn" id="17_o1aw4"]
 [ext_resource type="PackedScene" uid="uid://cx1vuev2wpv75" path="res://npc/hond.tscn" id="18_mrfsb"]
+[ext_resource type="PackedScene" uid="uid://f6t6830rkrem" path="res://npc/npcguide7.tscn" id="18_xel1v"]
 [ext_resource type="PackedScene" uid="uid://bjawlab5mr7ii" path="res://collectable's/cookie.tscn" id="19_xel1v"]
 [ext_resource type="PackedScene" uid="uid://df83pnlowiger" path="res://npc/npcguide6.tscn" id="20_u7s8g"]
 
@@ -610,6 +611,9 @@ position = Vector2(3608, 183)
 
 [node name="npc10" parent="." unique_id=1873698996 instance=ExtResource("17_o1aw4")]
 position = Vector2(3620, -197)
+
+[node name="npc11" parent="." unique_id=731287961 instance=ExtResource("18_xel1v")]
+position = Vector2(3466, 22)
 
 [connection signal="area_entered" from="level_exit" to="level_exit" method="_on_area_entered"]
 [connection signal="body_entered" from="level_exit" to="player" method="_on_area_2d_body_entered"]
