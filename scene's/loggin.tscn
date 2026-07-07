@@ -78,5 +78,14 @@ offset_bottom = 416.0
 placeholder_text = "wachtwoord hier"
 secret = true
 
+[node name="quit" type="Button" parent="Control" unique_id=712249098]
+layout_mode = 0
+offset_left = 1004.0
+offset_top = 616.0
+offset_right = 1153.0
+offset_bottom = 647.0
+text = "quit"
+
 [connection signal="pressed" from="Control/naar_registraatie" to="Control" method="_on_naar_registraatie_pressed"]
 [connection signal="pressed" from="Control/inlogen" to="Control" method="_on_inlogen_pressed"]
+[connection signal="pressed" from="Control/quit" to="Control" method="_on_quit_pressed"]

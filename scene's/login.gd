@@ -34,3 +34,9 @@ func _on_inlogen_pressed() -> void:
 	Gamemanger.player_name = user["name"]
 	Gamemanger.current_player_id = user["id"]
 	get_tree().change_scene_to_file("res://scene's/main menu.tscn")
+
+
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
